@@ -1,0 +1,321 @@
+.skweyed {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.skweyed .content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+}
+
+.skweyed .skweyed--bg {
+	margin: 0;
+	height: 100vh;
+	width: 100%;
+	margin: -1px;
+	background-image: url("../img/skweyed-bg.png");
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.skweyed .skweyed-content .hero-heading {
+	font-family: Parisienne;
+}
+
+.skweyed .skweyed-content h1 {
+	font-size: 2.525rem;
+}
+
+.skweyed .skweyed-content p {
+	font-size: 1.2rem;
+}
+
+.skweyed .skweyed-content p strong {
+	font-weight: 700;
+}
+
+.skweyed .skweyed-content .input-group--intro {
+	width: 80%;
+}
+
+.skweyed .skweyed-content .input-group--intro input {
+	height: auto;
+	font-size: 1rem;
+	padding: 1rem;
+}
+
+.skweyed .skweyed-content .input-group--intro input::placeholder {
+	font-style: italic
+}
+
+.skweyed .skweyed-content .input-group--intro button {
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 1rem;
+}
+
+.social-icons {
+	width: 18%;
+	z-index: 2;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0px;
+	padding-bottom: 10px;
+}
+
+.social-icons ul {
+	margin-top: 2rem;
+	width: 100%;
+	text-align: center;
+}
+
+.social-icons ul>li {
+	margin: 5px;
+	margin-left: 0rem;
+	display: inline-block;
+}
+
+.social-icons ul>li>a:hover {
+	background-color: #eddc5e;
+	color: rgb(64, 63, 69);
+	transition: ease-in 0.3s;
+	-webkit-transition: ease-in 0.3s;
+	-moz-transition: ease-in 0.3s;
+	-ms-transition: ease-in 0.3s;
+	-o-transition: ease-in 0.3s;
+}
+
+.social-icons ul>li>a {
+	display: block;
+	color: #fff;
+	background-color: rgb(64, 63, 69);
+	border-radius: 100%;
+	line-height: 2rem;
+	height: 2rem;
+	width: 2rem;
+	box-shadow: 1px 1px 6px rgb(64, 63, 69);
+}
+
+.btn-secondary {
+	background-color: #cab40f;
+	border-color: #cab40f;
+}
+
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover {
+	background-color: #c2ac06;
+	border-color: #c2ac06;
+}
+
+.input {
+	font-weight: 300;
+}
+
+
+/**
+ *
+ * ALL DEVICES
+ *	(from 0 - ~px)
+ */
+
+
+@media all {
+	body {
+		background: url("../img/bg-mobile-fallback.jpg") #848388 no-repeat center center scroll;
+		background-size: cover;
+	}
+}
+
+
+
+/**
+ *`
+ * SMALLER SCREENS
+ *	(from 300px - 320px)
+ */
+
+
+@media (min-width: 300px) and (max-width: 360px) {
+	.skweyed .skweyed-content {
+		padding: 2rem;
+		height: 100vh;
+		margin: auto;
+		transform: translate(0, 0);
+	}
+
+
+}
+
+
+/**
+ *`
+ * TABLETS TO SMALL LAPTOPS
+ *	(from 361px - 767px)
+ */
+
+
+@media screen and (mix-width: 361px) and (max-width: 767px) {
+	.social-icons {
+		width: 12%;
+	}
+}
+
+
+/**
+ *`
+ * SMALLER SMARTPHONES TO TABLETS
+ *	(from 0 - 800px)
+ */
+
+
+@media (max-width: 800px) {
+	body {
+		height: auto;
+		overflow: hidden;
+	}
+
+	.skweyed {
+		position: relative;
+		overflow: scroll;
+		z-index: 2;
+		margin: 0px;
+		margin-left: -1px;
+	}
+
+	.skweyed .skweyed--bg {
+		margin: 0;
+		background-size: cover;
+	}
+
+	.skweyed .skweyed-content .input-group--intro {
+		width: 100%;
+	}
+
+}
+
+
+/**
+ *`
+ * SMALLER SMARTPHONES TO TABLETS
+ *	(from 0 - 800px)
+ */
+
+
+@media (min-width: 768px) and (max-width: 800px) {
+	.skweyed .skweyed-content {
+		padding: 5rem;
+		height: 100vh;
+		margin: auto;
+		transform: translate(0%, 30%);
+	}
+}
+
+
+/**
+ *`
+ * TABLETS AND LARGER
+ *	(from 800px - ~px)
+ */
+
+
+@media screen and (min-width: 800px) {
+	.skweyed {
+		height: 100%;
+		min-height: 0;
+		padding-bottom: 0;
+	}
+
+	.skweyed .skweyed-content {
+		padding-left: 2.825rem;
+		padding-right: 4.25rem;
+	}
+
+	.skweyed .skweyed-content h1 {
+		font-size: 3.525rem;
+	}
+
+	.skweyed .skweyed-content p {
+		font-size: 1.3rem;
+	}
+
+	.social-icons ul {
+		margin-top: 0;
+		width: auto;
+	}
+}
+
+/**
+ *`
+ * SMALLER SMARTPHONES TO TABLETS
+ *	(from ~ - 1023px)
+ */
+
+
+@media (max-width: 1023px) {
+	.skweyed .skweyed--bg {
+		background-image: url("../img/skweyed-small-bg.png");
+		background-size: cover;
+	}
+}
+
+
+/**
+ *`
+ * NORMAL LAPTOP SCREENS
+ *	(from 1023px - 1243px)
+ */
+
+
+@media (min-width: 1023px) and (max-width: 1243px) {
+	.skweyed .skweyed-content {
+		padding-right: 10rem;
+	}
+
+	.social-icons {
+		width: 15%;
+	}
+
+}
+
+
+/**
+ *`
+ * LARGER LAPTOP SCREENS
+ *	(from 1240 - ~)
+ */
+
+
+@media (min-width: 1240px) and (man-width: 1400px) {
+
+	.skweyed .skweyed-content {
+		padding-right: 14rem;
+	}
+
+}
+
+
+/**
+ *`
+ * LARGEEST DESKTOP SCREENS
+ *	(from 1240 - ~)
+ */
+
+
+@media (min-width: 1440px) {
+
+	.skweyed .skweyed-content {
+		padding-right: 17rem;
+	}
+
+}

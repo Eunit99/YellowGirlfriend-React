@@ -1,10 +1,90 @@
-body {
+/**
+ *
+ * GENERAL STYLES
+ *
+ */
+
+* {
+  -webkit-user-select: none;
+  /* Chrome, Safari, Android and iOS */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  user-select: none;
+  /* Disables text selection */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  /* Remove margins and paddings on elements */
+  box-sizing: border-box;
+  /* Generate paddings inside elements */
+  outline: none;
+  -webkit-tap-highlight-color: none;
+  /* Highlight color when a button is tapped */
+  -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+div:focus,
+input:focus {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eddc5e;
+  border-radius: 10px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-style: italic;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  font-weight: 200;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* Custom fonts for Yellow Girlfriend  */
+
+@font-face {
+  font-family: Parisienne;
+  src: local('Parisienne'), url('./components/AppContainer/assets/fonts/parisienne/Parisienne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Mulish;
+  src: local('Mulish'), url('./components/AppContainer/assets/fonts/mulish/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: Raleway;
+  src: local('Raleway'), url('./components/AppContainer/assets/fonts/raleway/Raleway-VariableFont_wght.ttf') format('truetype');
 }
 
 code {

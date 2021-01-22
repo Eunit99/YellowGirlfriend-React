@@ -1,0 +1,16 @@
+.title-text {
+  font-weight: 700;
+  font-style: italic;
+  color: #eede61;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+}
+
