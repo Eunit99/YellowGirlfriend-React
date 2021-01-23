@@ -6,7 +6,7 @@ class HeroTextContainer extends Component {
 
   render() {
     let headingText = "We believe you know your girlfriend cheats on you*",
-    hour = new Date(2020, 8, 3, 23).getHours();
+    hour = new Date().getHours();
 
     if (hour < 12) {
       headingText = "We believe you know your girlfriend cheats on you*"
@@ -24,11 +24,6 @@ class HeroTextContainer extends Component {
           <h1>
             {headingText}
           </h1>
-
-          {/*  We believe you know your girlfriend cheats on you* */}
-          {/* We believe your girlfriend cheats on you* */}
-
-
         </div>
         <div className="mb-2">
           <p>We're convinced your girlfriend cheats on you, if not, you wouldn't find yourself here!
