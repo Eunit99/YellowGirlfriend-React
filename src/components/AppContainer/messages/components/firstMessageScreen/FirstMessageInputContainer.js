@@ -4,7 +4,7 @@ class FirstMessageInputContainer extends Component {
 
   render() {
     return (
-      <input type="text" id="nameInput" placeholder="Type your name..." />
+      <input type="text" id="messageInput" placeholder="Type your name..." />
     );
   }
 }
