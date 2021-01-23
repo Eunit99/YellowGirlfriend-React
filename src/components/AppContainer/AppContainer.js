@@ -5,17 +5,26 @@ import './assets/css/normalize.min.css'
 import './assets/css/reset.min.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import './AppContainer.css'
+import Skweyed from './skweyed/Skweyed';
+import Messages from './messages/Messages';
 
 
 class AppContainer extends Component {
-  
+
   render() {
     return (
       <div>
-        <div className="row">
-          <div className="col-12">
-            <h1 className="skweyed skweyed-content hero-heading">Yellow Girlfriend is coming</h1>
-            <p>This is the general container</p>
+        <div className="overlay"></div>
+        <div className="skweyed">
+          <div className="container-fluid m-0 p-0 h-100">
+            <div className="skweyed--bg"></div>
+            <div className="content">
+              <div className="row h-100">
+                {/* Content starts here */}
+                <Skweyed />
+                <Messages />
+              </div>
+            </div>
           </div>
         </div>
       </div>
