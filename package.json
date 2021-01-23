@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Yellow Girlfriend let's you grade your girlfriend SMV and get feedback based on your result",
   "main": "index.js",
-  "repository": "https://github.com/Eunit99/YellowGirlfriend.git",
+  "repository": "https://github.com/Eunit99/YellowGirlfriend-React.git",
   "author": "Eunit <eunithelp@gmail.com>",
   "license": "MIT",
   "private": true,
