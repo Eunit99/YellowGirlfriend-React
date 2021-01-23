@@ -221,6 +221,18 @@
   }
 }
 
+/**
+ *`
+ * SMALLER SMARTPHONES TO TABLETS
+ *	(from 0 - 800px)
+ */
+
+
+@media (max-width: 800px) {
+  .skweyed .skweyed-content {
+    text-align: center;
+  }
+}
 
 /**
  *`
