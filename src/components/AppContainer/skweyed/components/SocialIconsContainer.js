@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 
 class SocialIconsContainer extends Component {
@@ -10,17 +11,17 @@ class SocialIconsContainer extends Component {
             <ul className="list-unstyled mb-0">
               <li className="list-unstyled-item">
                 <a href="https://twitter.com/eunit99">
-                  <i className="fab fa-twitter"></i>
+                  <FontAwesomeIcon icon={['fab', 'twitter']} size="sm" />
                 </a>
               </li>
               <li className="list-unstyled-item">
                 <a href="https://facebook.com/eunit99">
-                  <i className="fab fa-facebook"></i>
+                  <FontAwesomeIcon icon={['fab', 'facebook']} size="sm" />
                 </a>
               </li>
               <li className="list-unstyled-item">
                 <a href="https://github.com/eunit99/yellowgirlfriend">
-                  <i className="fab fa-github"></i>
+                  <FontAwesomeIcon icon={['fab', 'github']} size="sm" />
                 </a>
               </li>
             </ul>
