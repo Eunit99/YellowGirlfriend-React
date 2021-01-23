@@ -3,41 +3,26 @@ import WelcomeInputContainer from './WelcomeInputContainer';
 
 class HeroTextContainer extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      initialTextState: true,
-      headingText: "We believe your girlfriend cheats on you*"
-    }
-  }
-    
-  
+
   render() {
-    setTimeout(() => {
-      this.setState(() => {
-        return {
-          initialTextState: !this.state.initialTextState
-        }
-      })
-    }, 3000);
-    console.log(this.state.initialTextState);
+    let headingText = "We believe you know your girlfriend cheats on you*",
+    hour = new Date(2020, 8, 3, 23).getHours();
 
-
-    // if (this.state.initialTextState) {
-    //   this.setState({
-    //     headingText: "We believe your girlfriend cheats on you*"
-    //   })
-    // } else {
-    //   this.setState({
-    //     headingText: "We believe your girlfriend cheats on you*"
-    //   })
-    // }
+    if (hour < 12) {
+      headingText = "We believe you know your girlfriend cheats on you*"
+    } else if (hour >= 12 && hour < 17) {
+      headingText = "We believe your girlfriend cheats on you*"
+    } else if (hour >= 17 && hour <= 21) {
+      headingText = "We believe your girlfriend will cheat on you*"
+    } else {
+      headingText = "We believe girlfriends cheat*"
+    }
 
     return (
       <div className="skweyed-content text-white">
         <div className="hero-heading mb-5">
           <h1>
-            {this.state.headingText}
+            {headingText}
           </h1>
 
           {/*  We believe you know your girlfriend cheats on you* */}
