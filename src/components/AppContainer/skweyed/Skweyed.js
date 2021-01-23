@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './components/assets/Skweyed.css'
 import HeroTextContainer from './components/HeroTextContainer';
 import SocialIconsContainer from './components/SocialIconsContainer';
-import WelcomeInputContainer from './components/WelcomeInputContainer';
 
 class Skweyed extends Component {
 
@@ -11,7 +10,6 @@ class Skweyed extends Component {
       <div className="col-12 col-sm-12 col-md-12 col-lg-7 my-auto m-0 p-0">
         {/* Contents goes here */}
         <HeroTextContainer />
-        <WelcomeInputContainer />
         <SocialIconsContainer />
       </div>
     );

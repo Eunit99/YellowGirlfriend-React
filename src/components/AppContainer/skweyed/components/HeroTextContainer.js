@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import WelcomeInputContainer from './WelcomeInputContainer';
 
 class HeroTextContainer extends Component {
   render() {
@@ -18,6 +19,7 @@ class HeroTextContainer extends Component {
             <span className="title-text">yellow girlfriend</span> "
           </p>
         </div>
+				<WelcomeInputContainer />
       </div>
     );
   }
