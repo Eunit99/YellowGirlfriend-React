@@ -2,19 +2,48 @@ import React, { Component } from 'react';
 import WelcomeInputContainer from './WelcomeInputContainer';
 
 class HeroTextContainer extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      initialTextState: true,
+      headingText: "We believe your girlfriend cheats on you*"
+    }
+  }
+    
+  
   render() {
+    setTimeout(() => {
+      this.setState(() => {
+        return {
+          initialTextState: !this.state.initialTextState
+        }
+      })
+    }, 3000);
+    console.log(this.state.initialTextState);
+
+
+    // if (this.state.initialTextState) {
+    //   this.setState({
+    //     headingText: "We believe your girlfriend cheats on you*"
+    //   })
+    // } else {
+    //   this.setState({
+    //     headingText: "We believe your girlfriend cheats on you*"
+    //   })
+    // }
+
     return (
       <div className="skweyed-content text-white">
         <div className="hero-heading mb-5">
-					{/* First text */}
           <h1>
-            We believe your girlfriend cheats on you*
+            {this.state.headingText}
           </h1>
-					
-					{/* Second text */}
-					{/* <h1>
-            We believe you know your girlfriend cheats on you*
-          </h1> */}
+
+          {/*  We believe you know your girlfriend cheats on you* */}
+          {/* We believe your girlfriend cheats on you* */}
+
+
         </div>
         <div className="mb-2">
           <p>We're convinced your girlfriend cheats on you, if not, you wouldn't find yourself here!
