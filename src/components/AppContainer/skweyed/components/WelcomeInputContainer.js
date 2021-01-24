@@ -26,7 +26,7 @@ class WelcomeInputContainer extends Component {
 
   render() {
     return(
-      <div className="input-group input-group--intro mt-5">
+      <div className="input-group input-group--intro">
         <AppStarterInput
           onChangeHandler={this.onChangeHandler}
         />

@@ -40,6 +40,10 @@
   font-weight: 700;
 }
 
+.skweyed .skweyed-content .input-group {
+  margin-top: 7rem;
+}
+
 .skweyed .skweyed-content .input-group--intro {
   width: 80%;
 }
@@ -153,19 +157,22 @@
     margin: auto;
     transform: translate(0, 0);
   }
-
-
 }
 
 
 /**
  *`
- * TABLETS TO SMALL LAPTOPS
+ * SMALLER SMARTPHONES
  *	(from 361px - 767px)
  */
 
 
-@media screen and (mix-width: 361px) and (max-width: 767px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
+  .skweyed .skweyed-content {
+    height: 100vh;
+    padding: 2rem;
+  }
+
   .social-icons {
     width: 12%;
   }
@@ -198,6 +205,10 @@
     background-size: cover;
   }
 
+  .skweyed .skweyed-content {
+    text-align: center;
+  }
+
   .skweyed .skweyed-content .input-group--intro {
     width: 100%;
   }
@@ -207,8 +218,22 @@
 
 /**
  *`
- * SMALLER SMARTPHONES TO TABLETS
- *	(from 0 - 800px)
+ *  SMALLER PHONES TO TABLETS
+ *	(from 385px - 800px)
+ */
+
+
+
+@media screen and (min-width: 385px) and (max-width: 800px) {
+  .skweyed .skweyed-content {
+    transform: translate(0%, 25%)
+  }
+}
+
+/**
+ *`
+ *  TABLETS
+ *	(from 768px - 800px)
  */
 
 
@@ -217,20 +242,11 @@
     padding: 5rem;
     height: 100vh;
     margin: auto;
-    transform: translate(0%, 30%);
   }
-}
-
-/**
- *`
- * SMALLER SMARTPHONES TO TABLETS
- *	(from 0 - 800px)
- */
 
 
-@media (max-width: 800px) {
-  .skweyed .skweyed-content {
-    text-align: center;
+  .skweyed .skweyed-content .input-group {
+    margin-top: 10rem;
   }
 }
 
