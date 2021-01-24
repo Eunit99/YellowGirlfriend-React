@@ -15,7 +15,7 @@ class SocialIconsContainer extends Component {
       this.setState({
         isSocialIconsHidden: false
       })
-    }, 180000); //Displays the social icons in 2 minutes
+    }, 120000); //Displays the social icons in 2 minutes
 
     return (
       <div className="row">
