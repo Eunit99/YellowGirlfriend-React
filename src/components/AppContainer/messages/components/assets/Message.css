@@ -218,7 +218,7 @@ ul {
 
 .messages-container {
   bottom: 70px;
-  width: 100%;
+  width: 98%;
   height: 100%;
   overflow-x: hidden;
   display: none;
@@ -242,7 +242,6 @@ ul {
   z-index: 5;
   display: block;
   position: relative;
-  width: 75%;
 }
 
 .individual-messages li {
