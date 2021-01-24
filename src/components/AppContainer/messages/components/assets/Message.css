@@ -216,6 +216,18 @@ ul {
   opacity: 1;
 }
 
+.messages-container:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 40px;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  background: linear-gradient(#fff, transparent);
+}
+
 .messages-container {
   bottom: 70px;
   width: 98%;
