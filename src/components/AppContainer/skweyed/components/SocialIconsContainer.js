@@ -15,7 +15,7 @@ class SocialIconsContainer extends Component {
       this.setState({
         isSocialIconsHidden: false
       })
-    }, 180000); //Displays the social icons in 3 minutes
+    }, 180000); //Displays the social icons in 2 minutes
 
     return (
       <div className="row">
@@ -34,7 +34,7 @@ class SocialIconsContainer extends Component {
                 </a>
               </li>
               <li className="list-unstyled-item">
-                <a href="https://linkedin.com/in">
+                <a href="https://linkedin.com/in/eunit99">
                   <FontAwesomeIcon icon={['fab', 'linkedin']} size="sm" />
                 </a>
               </li>
