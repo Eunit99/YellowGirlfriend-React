@@ -8,8 +8,8 @@ class WelcomeInputContainer extends Component {
       <input
         type="text"
         className="form-control"
-        placeholder="Enter first name ..."
-        aria-label="Enter first name ..."
+        placeholder="Enter first name..."
+        aria-label="Enter first name..."
         aria-describedby="submit-button"
         id="nameInput"
         value={this.props.visitorName}
