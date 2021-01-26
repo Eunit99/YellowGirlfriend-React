@@ -30,8 +30,8 @@ class HeroTextContainer extends Component {
           </p>
         </div>
         <div className="mb-5">
-          <p>Anyways, take a few minutes to complete our assessment to better understand if your girlfriend is a "
-            <span className="title-text">yellow girlfriend</span> "
+          <p>Anyways, take a few minutes to complete our assessment to better understand if your girlfriend is a
+            "<span className="title-text">yellow girlfriend</span> "
           </p>
         </div>
 				<WelcomeInputContainer />

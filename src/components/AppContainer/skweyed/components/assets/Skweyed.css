@@ -90,7 +90,7 @@
 }
 
 .social-icons ul>li>a:hover {
-  background-color: #eddc5e;
+  background-color: #e8ac17;
   color: rgb(64, 63, 69);
   transition: ease-in 0.3s;
   -webkit-transition: ease-in 0.3s;
@@ -111,15 +111,15 @@
 }
 
 .btn-secondary {
-  background-color: #cab40f;
-  border-color: #cab40f;
+  background-color: #e8ac17;
+  border-color: #e8ac17;
 }
 
 .btn-secondary:active,
 .btn-secondary:focus,
 .btn-secondary:hover {
-  background-color: #c2ac06;
-  border-color: #c2ac06;
+  background-color: #ce9505;
+  border-color: #ce9505;
 }
 
 .input {
@@ -136,7 +136,7 @@
 
 @media all {
   body {
-    background: url("../../../assets/img/bg-mobile-fallback.jpg") #848388 no-repeat center center scroll;
+    background: url("../../../assets/img/bg-mobile-fallback.jpg") #262626 no-repeat center center scroll;
     background-size: cover;
   }
 }
