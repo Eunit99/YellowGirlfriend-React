@@ -17,23 +17,26 @@ class WelcomeInputContainer extends Component {
   }
 
   onChangeHandler(e) {
-    let typedName = e.target.value;
 
     this.setState({
-      visitorName: typedName
+      visitorName: e.target.value
     })
   }
 
   render() {
     return(
       <div className="input-group input-group--intro">
+
         <AppStarterInput
           onChangeHandler={this.onChangeHandler}
+          visitorName={this.state.visitorName}
         />
+
         <AppStarterButton
           onClick={this.appStarterButton}
           visitorName={this.state.visitorName}
         />
+
       </div>
     );
   }
