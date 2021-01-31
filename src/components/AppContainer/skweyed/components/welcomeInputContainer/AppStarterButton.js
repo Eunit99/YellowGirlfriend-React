@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class AppStarterButton extends Component {
-  
+
   render() {
 
     //checking if input is not empty, then allow button interactivity
@@ -25,7 +25,7 @@ class AppStarterButton extends Component {
             className="btn btn-secondary"
             id="sendBtn"
             type="button"
-            onClick={this.onClick}
+            onClick={this.props.appStarterButton}
             disabled={isDisabled}
           >
             Start test

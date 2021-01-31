@@ -34,7 +34,12 @@ class HeroTextContainer extends Component {
             "<span className="title-text">yellow girlfriend</span> "
           </p>
         </div>
-				<WelcomeInputContainer />
+
+				<WelcomeInputContainer 
+          onChangeHandler={this.props.onChangeHandler}
+          visitorName={this.props.visitorName}
+          appStarterButton={this.props.appStarterButton}
+        />
       </div>
     );
   }

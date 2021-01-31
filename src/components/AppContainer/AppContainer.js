@@ -11,6 +11,29 @@ import Messages from './messages/Messages';
 
 class AppContainer extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      visitorName: "",
+      isMessageScreenHidden: true
+    }
+    this.appStarterButton = this.appStarterButton.bind(this)
+    this.onChangeHandler = this.onChangeHandler.bind(this)
+  }
+
+  appStarterButton() {
+    this.setState({
+      visitorName: this.state.visitorName,
+      isMessageScreenHidden: false
+    })
+  }
+
+  onChangeHandler(e) {
+    this.setState({
+      visitorName: e.target.value
+    })
+  }
+
   render() {
     return (
       <div className="app-container animated fadeIn">
@@ -21,8 +44,17 @@ class AppContainer extends Component {
             <div className="content animated fadeIn">
               <div className="row h-100">
                 {/* Content starts here */}
-                <Skweyed />
-                <Messages />
+                <Skweyed
+                  onChangeHandler={this.onChangeHandler}
+                  visitorName={this.state.visitorName}
+                  appStarterButton={this.appStarterButton}
+                />
+
+                <Messages
+                  onChangeHandler={this.onChangeHandler}
+                  visitorName={this.state.visitorName}
+                  appStarterButton={this.appStarterButton}
+                />
               </div>
             </div>
           </div>

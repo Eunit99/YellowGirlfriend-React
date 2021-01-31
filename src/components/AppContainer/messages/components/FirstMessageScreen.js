@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import FirstMessageInputContainer from './FirstMessageInputContainer'
+import FirstMessageInputContainer from './firstMessageScreen/FirstMessageInputContainer'
 
 class FirstMessageScreen extends Component {
 
   render() {
+    const user = this.props.user;
     return (
     <div className="message-container-intro">
-      <div className="small-into">Hello . . .</div>
+        <div className="small-into">Hello! {user}</div>
       <div className="long-into">What is your name?</div>
       <div className="message-input">
         <span className="input-icon">
