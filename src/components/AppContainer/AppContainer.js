@@ -14,11 +14,11 @@ class AppContainer extends Component {
   render() {
     return (
       <div className="app-container animated fadeIn">
-        <div className="overlay"></div>
-        <div className="skweyed">
-          <div className="container-fluid m-0 p-0 h-100">
-            <div className="skweyed--bg"></div>
-            <div className="content">
+        <div className="overlay animated fadeIn"></div>
+        <div className="skweyed animated fadeIn">
+          <div className="container-fluid m-0 p-0 h-100 animated fadeIn">
+            <div className="skweyed--bg animated fadeIn"></div>
+            <div className="content animated fadeIn">
               <div className="row h-100">
                 {/* Content starts here */}
                 <Skweyed />
