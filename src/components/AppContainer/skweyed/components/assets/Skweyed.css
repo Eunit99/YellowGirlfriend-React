@@ -126,23 +126,6 @@
   font-weight: 300;
 }
 
-
-/**
- *
- * ALL DEVICES
- *	(from 0 - ~px)
- */
-
-
-@media all {
-  body {
-    background: url("../../../assets/img/bg-mobile-fallback.jpg") #262626 no-repeat center center scroll;
-    background-size: cover;
-  }
-}
-
-
-
 /**
  *`
  * SMALLER SCREENS

@@ -13,7 +13,7 @@ class AppContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app-container animated fadeIn">
         <div className="overlay"></div>
         <div className="skweyed">
           <div className="container-fluid m-0 p-0 h-100">
