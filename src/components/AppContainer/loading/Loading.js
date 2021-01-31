@@ -6,7 +6,7 @@ class Loading extends Component {
 
   render() {
     return (
-      <div class="load animated fadeIn">
+      <div className="load animated fadeIn">
         <span>loading...</span>
       </div>
     );
