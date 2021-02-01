@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import WelcomeInputContainer from './WelcomeInputContainer';
+import ReactTooltip from 'react-tooltip'
 
 class HeroTextContainer extends Component {
 
 
   render() {
-    let headingText = "We believe you know your girlfriend cheats on you*",
+    let headingText = "We believe you know your girlfriend cheats on you",
     hour = new Date().getHours();
 
     if (hour < 12) {
-      headingText = "We believe you know your girlfriend cheats on you*"
+      headingText = "We believe you know your girlfriend cheats on you"
     } else if (hour >= 12 && hour < 17) {
-      headingText = "We believe your girlfriend cheats on you*"
+      headingText = "We believe your girlfriend cheats on you"
     } else if (hour >= 17 && hour <= 21) {
-      headingText = "We believe your girlfriend will cheat on you*"
+      headingText = "We believe your girlfriend will cheat on you"
     } else {
-      headingText = "We believe girlfriends cheat*"
+      headingText = "We believe girlfriends cheat"
     }
 
     return (
@@ -23,6 +24,7 @@ class HeroTextContainer extends Component {
         <div className="hero-heading mb-5">
           <h1>
             {headingText}
+            <span data-tip="This is just our opinion and shouldn't be considered a professional advice.">*</span>
           </h1>
         </div>
         <div className="mb-2">
@@ -31,8 +33,25 @@ class HeroTextContainer extends Component {
         </div>
         <div className="mb-5">
           <p>Anyways, take a few minutes to complete our assessment to better understand if your girlfriend is a
-            "<span className="title-text">yellow girlfriend</span> "
+            "<span
+              className="title-text"
+              data-tip="Yellow girlfriend is our own term given to<br>
+              cheating girlfriends and has nothing to do with any race. <br>
+              Please read our Terms of Service to learn more."
+            >
+              yellow girlfriend
+            </span>"
           </p>
+          <ReactTooltip
+            place="right"
+            delayHide="1000"
+            border={true}
+            textColor="#000000"
+            backgroundColor="#f8dea2"
+            borderColor="#f8dea2"
+            clickable={true}
+            multiline={true}
+          />
         </div>
 
 				<WelcomeInputContainer 
