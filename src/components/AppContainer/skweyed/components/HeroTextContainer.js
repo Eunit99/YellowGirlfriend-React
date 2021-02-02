@@ -43,7 +43,7 @@ class HeroTextContainer extends Component {
             </span>"
           </p>
           <ReactTooltip
-            place="right"
+            place="top"
             delayHide="1000"
             border={true}
             textColor="#000000"
