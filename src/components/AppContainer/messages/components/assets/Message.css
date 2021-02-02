@@ -198,13 +198,13 @@ ul {
 }
 
 .activeSend {
-  background-color: #cab40f;
+  background-color: #e8ac17;
   pointer-events: visible;
 }
 
 .activeSend:hover,
 .activeSend:focus {
-  background-color: #c2ac06;
+  background-color: #ce9505;
   outline: none;
 }
 
@@ -272,15 +272,15 @@ ul {
 }
 
 .individual-messages li.bot {
-  background-color: #fff9ce;
-  color: #181818;
+  background-color: #f6dea2;
+  color: #000;
   border-radius: 0 20px 20px 20px;
   float: left;
 }
 
 .individual-messages li.user {
   float: right;
-  background-color: #181818;
+  background-color: #262626;
   color: #fff;
   border-radius: 20px 0 20px 20px;
 }

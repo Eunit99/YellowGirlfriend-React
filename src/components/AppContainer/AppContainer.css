@@ -1,7 +1,12 @@
+.app-container {
+  background: url("../../components/AppContainer/assets/img/bg-mobile-fallback.jpg") #262626 no-repeat center center scroll;
+  background-size: cover;
+}
+
 .title-text {
   font-weight: 700;
   font-style: italic;
-  color: #eede61;
+  color: #e8ac17;
 }
 
 .overlay {
@@ -13,4 +18,3 @@
   z-index: 1;
   margin: 0;
 }
-
