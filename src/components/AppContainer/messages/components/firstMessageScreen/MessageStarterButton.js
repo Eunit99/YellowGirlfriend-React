@@ -4,13 +4,12 @@ class MessageStarterButton extends Component {
   constructor() {
     super()
     this.state = {
-
+     
     }
     this.sendMessageButton = this.sendMessageButton.bind(this)
   }
 
   sendMessageButton() {
-    console.log(`I as the sendMessageButton is working`)
   }
 
   render() {
