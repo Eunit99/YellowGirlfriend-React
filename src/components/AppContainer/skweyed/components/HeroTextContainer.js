@@ -4,46 +4,7 @@ import ReactTooltip from 'react-tooltip'
 import CookiesConsent from './cookies-consent/CookiesConsent';
 
 class HeroTextContainer extends Component {
-  constructor() {
-      super();
-      this.state = {
-        visitorAcceptCookies: false,
-        isCookiesConsentDisplayed: false
-      }
-    this.cookiesAccept = this.cookiesAccept.bind(this)
-    this.learnMoreAboutCookies = this.learnMoreAboutCookies.bind(this)
-    }
-
-    componentDidMount() {
-      setTimeout(() => {
-        this.setState({
-          isCookiesConsentDisplayed: true
-        })
-      }, 2000);
-    }
-
-    componentWillUnmount() {
-      this.setState({
-        isCookiesConsentDisplayed: false
-      })
-    }
-
-  cookiesAccept = () => {
-    this.setState({
-      isCookiesConsentDisplayed: false,
-      visitorAcceptCookies: true
-    })
-    console.log(`You just accepted our Cookie consent`)
-  }
-
-  learnMoreAboutCookies = () => {
-    this.setState({
-
-    })
-  } 
-
   render() {
-    console.log(`Visitor accepted cookies? ${this.state.visitorAcceptCookies}`)
     
     let headingText = "We believe you know your girlfriend cheats on you",
     hour = new Date().getHours();
@@ -99,10 +60,7 @@ class HeroTextContainer extends Component {
           appStarterButton={this.props.appStarterButton}
         />
 
-        <CookiesConsent
-          isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
-          visitorAcceptCookies={this.state.visitorAcceptCookies}
-        />
+        <CookiesConsent />
       </div>
     );
   }

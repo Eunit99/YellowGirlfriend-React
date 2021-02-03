@@ -2,15 +2,59 @@ import React, { Component } from 'react';
 import './assets/css/CookiesConsent.css'
 
 class CookiesConsent extends Component {
-  
+  constructor() {
+    super();
+    this.state = {
+      visitorAcceptCookies: false,
+      isCookiesConsentDisplayed: false
+    }
+    this.cookiesAccept = this.cookiesAccept.bind(this)
+    this.learnMoreAboutCookies = this.learnMoreAboutCookies.bind(this)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isCookiesConsentDisplayed: true
+      })
+    }, 2000);
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      isCookiesConsentDisplayed: false
+    })
+  }
+
+  cookiesAccept = () => {
+    this.setState({
+      isCookiesConsentDisplayed: false,
+      visitorAcceptCookies: true
+    })
+  }
+
+  learnMoreAboutCookies = () => {
+    this.setState({
+
+    })
+  } 
 
   render() {
+    let isCookiesConsentDisplayed = this.state.isCookiesConsentDisplayed
+    let visitorAcceptCookies = this.state.visitorAcceptCookies
+
     // For development use only
-    // console.log(`isCookiesConsentDisplayed? ${this.props.isCookiesConsentDisplayed}`)
+    // console.log(`isCookiesConsentDisplayed? ${isCookiesConsentDisplayed}`)
+    // console.log(`visitorAcceptCookies? ${visitorAcceptCookies}`)
+
     return (
       <div className="cookies-consent">
-        {this.props.isCookiesConsentDisplayed &&
-          <div className="cookies-consent-container">
+        {isCookiesConsentDisplayed &&
+          <div className={`
+            cookies-consent-container animated
+            ${ isCookiesConsentDisplayed ? "slideInUp" : "" }
+            ${ visitorAcceptCookies ? "slideOutDown" : "" }
+          `}>
           <div className="row cookies-consent-text">
             <div className="col-12 mx-1">
               <div className="cookies-title mb-2 text-left">
@@ -27,13 +71,12 @@ class CookiesConsent extends Component {
               </div>
             </div>
           </div>
-
           <div className="row cookies-consent-text mt-3 mt-sm-4">
             <div className="col-6">
               <span
                 id="tos"
                 className="cookies-cta cookies-cta--learn"
-                onClick={this.props.learnMoreAboutCookies}
+                onClick={this.learnMoreAboutCookies}
               >Learn more
               </span>
             </div>
@@ -41,12 +84,11 @@ class CookiesConsent extends Component {
               <span
                 id="cookiesAccept"
                 className="cookies-cta cookies-cta--accept"
-                onClick={this.props.cookiesAccept}
+                onClick={this.cookiesAccept}
               > Accept
               </span>
             </div>
           </div>
-
         </div>
         }
       </div> 
