@@ -7,7 +7,7 @@
   background-color: #22419A;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 6px 18px 0 rgba(0, 35, 90, .08), 0 0 2px 0 rgba(0, 35, 90, .06);
+  box-shadow: 0 6px 18px 0 #00235a14, 0 0 2px 0 #00235a0f;
   cursor: pointer;
   transform: translateY(30px);
   opacity: 0;
@@ -42,7 +42,7 @@ ul {
   padding: 30px;
   overflow-x: hidden;
   background-color: #fffdf1;
-  color: rgb(15, 15, 15);
+  color: #0f0f0f;
   opacity: 0.8;
   margin: auto;
   margin-right: 40px;
@@ -78,7 +78,7 @@ ul {
   height: 50px;
   margin-top: 40px;
   background-color: #fff;
-  box-shadow: 0 6px 18px 0 rgba(0, 35, 90, .08), 0 0 2px 0 rgba(0, 35, 90, .06);
+  box-shadow: 0 6px 18px 0 #00235a14, 0 0 2px 0 #00235a0f;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -145,7 +145,7 @@ ul {
   bottom: 0;
   left: 0;
   width: 98%;
-  background-color: rgb(255, 255, 224);
+  background-color: #ffffe0;
   display: flex;
   align-items: center;
   visibility: hidden;
@@ -167,7 +167,7 @@ ul {
 }
 
 .message-input-container textarea:hover {
-  background-color: rgba(219, 219, 219, 0.3);
+  background-color: #dbdbdb4d;
   transition: background-color 0.3s ease-in;
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WelcomeInputContainer from './WelcomeInputContainer';
 import ReactTooltip from 'react-tooltip'
+import CookiesConsent from './cookies-consent/CookiesConsent';
 
 class HeroTextContainer extends Component {
 
@@ -21,17 +22,17 @@ class HeroTextContainer extends Component {
 
     return (
       <div className="skweyed-content text-white">
-        <div className="hero-heading mb-5">
+        <div className="hero-heading mb-2 mb-sm-5">
           <h1>
             {headingText}
             <span data-tip="This is just our opinion and shouldn't be considered a professional advice.">*</span>
           </h1>
         </div>
-        <div className="mb-2">
+        <div className="mb-2 mb-sm-3">
           <p>We're convinced your girlfriend cheats on you, if not, you wouldn't find yourself here!
           </p>
         </div>
-        <div className="mb-5">
+        <div className="mb-2 mb-sm-5">
           <p>Anyways, take a few minutes to complete our assessment to better understand if your girlfriend is a
             "<span
               className="title-text"
@@ -44,7 +45,7 @@ class HeroTextContainer extends Component {
           </p>
           <ReactTooltip
             place="top"
-            delayHide="1000"
+            delayHide={1000}
             border={true}
             textColor="#000000"
             backgroundColor="#f8dea2"
@@ -59,6 +60,8 @@ class HeroTextContainer extends Component {
           visitorName={this.props.visitorName}
           appStarterButton={this.props.appStarterButton}
         />
+
+        <CookiesConsent />
       </div>
     );
   }
