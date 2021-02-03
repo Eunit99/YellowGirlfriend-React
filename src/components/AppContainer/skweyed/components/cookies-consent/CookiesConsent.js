@@ -12,7 +12,7 @@ class CookiesConsent extends Component {
     this.learnMoreAboutCookies = this.learnMoreAboutCookies.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount() { 
     setTimeout(() => {
       this.setState({
         isCookiesConsentDisplayed: true
