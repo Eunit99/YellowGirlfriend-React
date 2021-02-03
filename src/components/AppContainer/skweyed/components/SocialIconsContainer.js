@@ -20,7 +20,7 @@ class SocialIconsContainer extends Component {
     return (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12 col-lg-2 text-left">
-          {this.state.isSocialIconsHidden ? "" :
+          {!this.state.isSocialIconsHidden &&
           <div className="social-icons">
             <ul className="list-unstyled mb-0">
               <li className="list-unstyled-item">

@@ -5,18 +5,18 @@ class AppStarterButton extends Component {
   render() {
 
     //checking if input is not empty, then allow button interactivity
-    let isDisabled,
+    let isButtonDisabled,
     visitorName = this.props.visitorName; //Name of visitor typed in the input field in the Skweyed component
 
     // Check if input field is not empty
     if (visitorName !== "") {
-      isDisabled = false
+      isButtonDisabled = false
     } else {
-      isDisabled = true
+      isButtonDisabled = true
     }
     
     // For development use only
-    // console.log(`Button is disabled: ${isDisabled}, \n Visitor's name is: ${visitorName}`)
+    // console.log(`Button is disabled: ${isButtonDisabled}, \n Visitor's name is: ${visitorName}`)
 
     return (
         <div
@@ -26,7 +26,7 @@ class AppStarterButton extends Component {
             id="sendBtn"
             type="button"
             onClick={this.props.appStarterButton}
-            disabled={isDisabled}
+            disabled={isButtonDisabled}
           >
             Start test
           </button>
