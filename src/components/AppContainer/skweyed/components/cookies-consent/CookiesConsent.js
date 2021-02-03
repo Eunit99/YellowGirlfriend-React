@@ -55,20 +55,21 @@ class CookiesConsent extends Component {
             ${ isCookiesConsentDisplayed ? "slideInUp" : "" }
             ${ visitorAcceptCookies ? "slideOutDown" : "" }
           `}>
-          <div className="row cookies-consent-text">
+          <div className="row cookies-consent-text cookies-consent-text--span">
             <div className="col-12 mx-1">
               <div className="cookies-title mb-2 text-left">
                 Notice
               </div>
-              <div className="my-2 text-left">
+              <span className="my-2 text-left">
                 This website or its third-party tools use cookies, which are necessary for its 
                 functioning and required to achieve the purposes illustrated in the 
                 <span className="cookies-cta-inline" id="tos"> cookie policy</span>.
-              </div>
-              <div className="my-2 text-left">
+              </span>
+              &nbsp;
+              <span className="my-2 text-left">
                 You accept the use of cookies by closing or dismissing this notice, 
                 by scrolling this page, by clicking a link or button or by continuing to browse otherwise.
-              </div>
+              </span>
             </div>
           </div>
           <div className="row cookies-consent-text mt-3 mt-sm-4">
@@ -80,7 +81,7 @@ class CookiesConsent extends Component {
               >Learn more
               </span>
             </div>
-            <div className="col-6">
+            <div className="col-6 text-right">
               <span
                 id="cookiesAccept"
                 className="cookies-cta cookies-cta--accept"
