@@ -15,7 +15,7 @@ class AppContainer extends Component {
     super()
     this.state = {
       visitorName: "",
-      isMessageScreenDisplayed: true //For now, display message container
+      isMessageScreenDisplayed: false //Hide Message component by default
     }
     this.appStarterButton = this.appStarterButton.bind(this)
     this.onChangeHandler = this.onChangeHandler.bind(this)

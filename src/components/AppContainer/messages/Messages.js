@@ -4,7 +4,6 @@ import ChatsContainer from './components/ChatsContainer';
 import FirstMessageScreen from './components/FirstMessageScreen';
 import '../../AppContainer/assets/css/animate.min.css'
 
-
 class Messages extends Component {
 
   render() {

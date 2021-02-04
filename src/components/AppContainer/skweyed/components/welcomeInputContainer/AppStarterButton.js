@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-scroll'
 
 
 class AppStarterButton extends Component {
@@ -30,15 +29,7 @@ class AppStarterButton extends Component {
               onClick={this.props.appStarterButton}
               disabled={isButtonDisabled}
             >
-              <Link
-                activeClass="messageActive"
-                isDynamic={true}
-                to="messageContainer"
-                spy={false}
-                smooth={true}
-              >
-                Start test
-              </Link>
+              Start test
             </button>
         </div>
     );
