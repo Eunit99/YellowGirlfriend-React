@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-scroll'
+
 
 class AppStarterButton extends Component {
 
@@ -21,15 +23,24 @@ class AppStarterButton extends Component {
     return (
         <div
           className="input-group-append">
-          <button
-            className="btn btn-secondary"
-            id="sendBtn"
-            type="button"
-            onClick={this.props.appStarterButton}
-            disabled={isButtonDisabled}
-          >
-            Start test
-          </button>
+            <button
+              className="btn btn-secondary"
+              id="sendBtn"
+              type="button"
+              onClick={this.props.appStarterButton}
+              disabled={isButtonDisabled}
+            >
+              <Link
+                // activeClass="activeMessage"
+                // delay={500}
+                isDynamic={true}
+                to="messageContainer"
+                spy={false}
+                smooth={true}
+              >
+                Start test
+              </Link>
+            </button>
         </div>
     );
   }

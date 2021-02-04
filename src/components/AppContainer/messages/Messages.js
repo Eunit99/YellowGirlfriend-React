@@ -14,7 +14,7 @@ class Messages extends Component {
     return (
       <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
         { isMessageScreenDisplayed &&
-          <div className="message-container animated fadeIn">
+          <div id="messageContainer" className="message-container animated fadeIn">
             {/* Content starts here */}
                 <FirstMessageScreen
                   user={user}
