@@ -31,8 +31,7 @@ class AppStarterButton extends Component {
               disabled={isButtonDisabled}
             >
               <Link
-                // activeClass="activeMessage"
-                // delay={500}
+                activeClass="messageActive"
                 isDynamic={true}
                 to="messageContainer"
                 spy={false}
