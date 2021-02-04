@@ -11,6 +11,7 @@ class Skweyed extends Component {
       <div className="col-12 col-sm-12 col-md-12 col-lg-7 my-auto m-0 p-0 animated fadeIn">
         {/* Content starts here */}
         <HeroTextContainer
+          handleScrollClick={this.props.handleScrollClick}
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}
           appStarterButton={this.props.appStarterButton}
