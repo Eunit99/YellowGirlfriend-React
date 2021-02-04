@@ -34,6 +34,11 @@ class AppContainer extends Component {
     })
   }
 
+  handleScrollClick(ref) {
+  // console.log(`Click happened! ${ref}`); // Ref is still undefined! Having a hard time passing it from the child component, I hope to fix this soon.
+  // ref.current.scrollIntoView({ behaviour: 'smooth' }) //Ref is still undefined!
+  }
+
   render() {
     return (
       <div className="app-container animated fadeIn">
@@ -45,12 +50,14 @@ class AppContainer extends Component {
               <div className="row h-100">
                 {/* Content starts here */}
                 <Skweyed
+                  handleScrollClick={this.handleScrollClick}
                   onChangeHandler={this.onChangeHandler}
                   visitorName={this.state.visitorName}
                   appStarterButton={this.appStarterButton}
                 />
 
                 <Messages
+                  handleScrollClick={this.handleScrollClick}
                   onChangeHandler={this.onChangeHandler}
                   visitorName={this.state.visitorName}
                   appStarterButton={this.appStarterButton}

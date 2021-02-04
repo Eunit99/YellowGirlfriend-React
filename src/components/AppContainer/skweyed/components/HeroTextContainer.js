@@ -54,7 +54,8 @@ class HeroTextContainer extends Component {
           />
         </div>
 
-				<WelcomeInputContainer 
+				<WelcomeInputContainer
+          handleScrollClick={this.props.handleScrollClick}
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}
           appStarterButton={this.props.appStarterButton}

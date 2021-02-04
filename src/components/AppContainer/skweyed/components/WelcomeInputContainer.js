@@ -15,6 +15,7 @@ class WelcomeInputContainer extends Component {
         />
 
         <AppStarterButton
+          handleScrollClick={this.props.handleScrollClick}
           appStarterButton={this.props.appStarterButton}
           visitorName={this.props.visitorName}
         />

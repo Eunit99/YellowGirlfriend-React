@@ -14,7 +14,6 @@ const Messages = (props) => {
     <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
       { isMessageScreenDisplayed &&
         <div
-          messageref={messageRef}
           ref={messageRef}
           id="messageContainer"
           className="message-container animated fadeIn"

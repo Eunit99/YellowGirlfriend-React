@@ -2,12 +2,6 @@ import React from 'react';
 
 const AppStarterButton = (props) => {
   
-  function handleScrollClick() {
-    console.log(`Click happened!`);
-    props.messageref.current.scrollIntoView({ behaviour: 'smooth'})
-  }
-
-
   //checking if input is not empty, then allow button interactivity
   let isButtonDisabled,
     visitorName = props.visitorName; //Name of visitor typed in the input field in the Skweyed component
@@ -29,7 +23,7 @@ const AppStarterButton = (props) => {
           className="btn btn-secondary"
           id="sendBtn"
           type="button"
-          onClick={() => {props.appStarterButton(); handleScrollClick() }}
+          onClick={() => {props.appStarterButton(); props.handleScrollClick() }}
           disabled={isButtonDisabled}
         > Start test
             </button>
