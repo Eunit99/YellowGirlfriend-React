@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FirstMessageInputContainer from './firstMessageScreen/FirstMessageInputContainer'
+// import FirstMessageInputContainer from './firstMessageScreen/FirstMessageInputContainer'
 
 class FirstMessageScreen extends Component {
 
@@ -18,7 +18,7 @@ class FirstMessageScreen extends Component {
           {greetingText} 
         </div>
         <div className="small-into">Welcome to yellow girlfriend.</div>
-        <FirstMessageInputContainer />
+        {/* <FirstMessageInputContainer /> */}
       </div>
     );
   }
