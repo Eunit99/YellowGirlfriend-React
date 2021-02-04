@@ -2,46 +2,10 @@ import React, { Component } from 'react';
 import './assets/css/CookiesConsent.css'
 
 class CookiesConsent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      visitorAcceptCookies: false,
-      isCookiesConsentDisplayed: false
-    }
-    this.cookiesAccept = this.cookiesAccept.bind(this)
-    this.learnMoreAboutCookies = this.learnMoreAboutCookies.bind(this)
-  }
-
-  componentDidMount() { 
-    setTimeout(() => {
-      this.setState({
-        isCookiesConsentDisplayed: true
-      })
-    }, 2000);
-  }
-
-  componentWillUnmount() {
-    this.setState({
-      isCookiesConsentDisplayed: false
-    })
-  }
-
-  cookiesAccept = () => {
-    this.setState({
-      isCookiesConsentDisplayed: false,
-      visitorAcceptCookies: true
-    })
-  }
-
-  learnMoreAboutCookies = () => {
-    this.setState({
-
-    })
-  } 
 
   render() {
-    let isCookiesConsentDisplayed = this.state.isCookiesConsentDisplayed
-    let visitorAcceptCookies = this.state.visitorAcceptCookies
+    let isCookiesConsentDisplayed = this.props.isCookiesConsentDisplayed
+    let visitorAcceptCookies = this.props.visitorAcceptCookies
 
     // For development use only
     // console.log(`isCookiesConsentDisplayed? ${isCookiesConsentDisplayed}`)
@@ -77,15 +41,16 @@ class CookiesConsent extends Component {
               <span
                 id="tos"
                 className="cookies-cta cookies-cta--learn"
-                onClick={this.learnMoreAboutCookies}
-              >Learn more
+                onClick={this.props.learnMoreAboutCookies}
+              >
+                Learn more
               </span>
             </div>
             <div className="col-6 text-right">
               <span
                 id="cookiesAccept"
                 className="cookies-cta cookies-cta--accept"
-                onClick={this.cookiesAccept}
+                onClick={this.props.cookiesAccept}
               > Accept
               </span>
             </div>

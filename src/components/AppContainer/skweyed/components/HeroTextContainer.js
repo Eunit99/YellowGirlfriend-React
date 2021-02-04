@@ -61,7 +61,10 @@ class HeroTextContainer extends Component {
           appStarterButton={this.props.appStarterButton}
         />
 
-        <CookiesConsent />
+        <CookiesConsent
+          cookiesAccept={this.props.cookiesAccept}
+          isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
+        />
       </div>
     );
   }

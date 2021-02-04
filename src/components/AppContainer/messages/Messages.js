@@ -9,14 +9,25 @@ const Messages = (props) => {
   const user = props.visitorName,
     isMessageScreenDisplayed = props.isMessageScreenDisplayed,
     messageRef = useRef();
+  let displayMessageScreen,
+    visitorAcceptedCookiesConsent = props.visitorAcceptCookies
+
+  if (isMessageScreenDisplayed === true && visitorAcceptedCookiesConsent === true) {
+     displayMessageScreen = true
+  } else {
+     displayMessageScreen = false
+  }
+
+  console.log(`Is message screen displayed? ${displayMessageScreen}`);
+  console.log(`Is cookie consent accepted? ${visitorAcceptedCookiesConsent}`);
 
   return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
-      { isMessageScreenDisplayed &&
+      { displayMessageScreen &&
         <div
           ref={messageRef}
           id="messageContainer"
-          className="message-container animated fadeIn"
+          className="message-container"
         >
           {/* Content starts here */}
           <FirstMessageScreen

@@ -15,10 +15,14 @@ class AppContainer extends Component {
     super()
     this.state = {
       visitorName: "",
-      isMessageScreenDisplayed: false //Hide Message component by default
+      isMessageScreenDisplayed: false, //Hide Message component by default
+      visitorAcceptCookies: false, //visitor has not accepted cookies consent
+      isCookiesConsentDisplayed: false // cookies message is not displayed by default
     }
-    this.appStarterButton = this.appStarterButton.bind(this)
-    this.onChangeHandler = this.onChangeHandler.bind(this)
+    this.appStarterButton = this.appStarterButton.bind(this);
+    this.onChangeHandler = this.onChangeHandler.bind(this);
+    this.cookiesAccept = this.cookiesAccept.bind(this);
+    this.learnMoreAboutCookies = this.learnMoreAboutCookies.bind(this);
   }
 
   appStarterButton() {
@@ -39,6 +43,33 @@ class AppContainer extends Component {
   // ref.current.scrollIntoView({ behaviour: 'smooth' }) //Ref is still undefined!
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isCookiesConsentDisplayed: true //cookies message is displayed to user after 2s
+      })
+    }, 2000);
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      isCookiesConsentDisplayed: false
+    })
+  }
+
+  cookiesAccept = () => {
+    this.setState({
+      isCookiesConsentDisplayed: false, //cookies message is not displayed by as user accepts cookie consent
+      visitorAcceptCookies: true //visitor has accepted cookies consent
+    })
+  }
+
+  learnMoreAboutCookies = () => {
+    this.setState({
+
+    })
+  }
+
   render() {
     return (
       <div className="app-container animated fadeIn">
@@ -54,6 +85,9 @@ class AppContainer extends Component {
                   onChangeHandler={this.onChangeHandler}
                   visitorName={this.state.visitorName}
                   appStarterButton={this.appStarterButton}
+                  cookiesAccept={this.cookiesAccept}
+                  isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
+                  visitorAcceptCookies={this.state.visitorAcceptCookies}
                 />
 
                 <Messages
@@ -62,6 +96,9 @@ class AppContainer extends Component {
                   visitorName={this.state.visitorName}
                   appStarterButton={this.appStarterButton}
                   isMessageScreenDisplayed={this.state.isMessageScreenDisplayed}
+                  cookiesAccept={this.cookiesAccept}
+                  isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
+                  visitorAcceptCookies={this.state.visitorAcceptCookies}
                 />
               </div>
             </div>

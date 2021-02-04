@@ -15,6 +15,8 @@ class Skweyed extends Component {
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}
           appStarterButton={this.props.appStarterButton}
+          cookiesAccept={this.props.cookiesAccept}
+          isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
         />
         <SocialIconsContainer />
       </div>
