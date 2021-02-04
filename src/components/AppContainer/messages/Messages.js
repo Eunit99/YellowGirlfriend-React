@@ -9,6 +9,7 @@ const Messages = (props) => {
   const user = props.visitorName,
     isMessageScreenDisplayed = props.isMessageScreenDisplayed,
     messageRef = useRef();
+    
   let displayMessageScreen,
     visitorAcceptedCookiesConsent = props.visitorAcceptCookies
 
@@ -18,8 +19,9 @@ const Messages = (props) => {
      displayMessageScreen = false
   }
 
-  console.log(`Is message screen displayed? ${displayMessageScreen}`);
-  console.log(`Is cookie consent accepted? ${visitorAcceptedCookiesConsent}`);
+  // For development use only
+  // console.log(`Is message screen displayed? ${displayMessageScreen}`);
+  // console.log(`Is cookie consent accepted? ${visitorAcceptedCookiesConsent}`);
 
   return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
