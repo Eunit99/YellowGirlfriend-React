@@ -27,7 +27,11 @@ class CookiesConsent extends Component {
               <span className="my-2 text-left">
                 This website or its third-party tools use cookies, which are necessary for its 
                 functioning and required to achieve the purposes illustrated in the 
-                <span className="cookies-cta-inline" id="tos"> cookie policy</span>.
+                <span
+                  className="cookies-cta-inline"
+                  id="tos"
+                  onClick={this.props.displayTermsOfService}
+                > cookie policy</span>.
               </span>
               &nbsp;
               <span className="my-2 text-left">
@@ -41,7 +45,7 @@ class CookiesConsent extends Component {
               <span
                 id="tos"
                 className="cookies-cta cookies-cta--learn"
-                onClick={this.props.learnMoreAboutCookies}
+                onClick={this.props.displayTermsOfService}
               >
                 Learn more
               </span>

@@ -10,16 +10,16 @@ class SuggestAcceptCookies extends Component {
     let isSuggestAcceptCookiesDisplayed = this.props.isSuggestAcceptCookiesDisplayed
 
     // For development use only
-    console.log(`isSuggestAcceptCookiesDisplayed? ${isSuggestAcceptCookiesDisplayed}`)
+    // console.log(`isSuggestAcceptCookiesDisplayed? ${isSuggestAcceptCookiesDisplayed}`)
     
 
     return (
       <div className="contain">
         {isSuggestAcceptCookiesDisplayed ? 
-        <div className="info-container">
           <div className={`
+            info-container
             animated
-            ${isSuggestAcceptCookiesDisplayed ? "slideInDown" : "slideOutUp"}
+            ${isSuggestAcceptCookiesDisplayed ? "slideInDown" : ""}
             `}
           >
             {/* Content goes here */}
@@ -34,7 +34,7 @@ class SuggestAcceptCookies extends Component {
 
               <div className="col-8">
                 <span className="info-text">
-                  Please accept cookies terms to start the test.
+                  Please accept our Terms of Service to start the test.
                 </span>
               </div>
 
@@ -42,14 +42,14 @@ class SuggestAcceptCookies extends Component {
                 <span
                   className="close-btn"
                   id="closeInfo"
-                  onClick={this.props.closeInfo}
+                  onClick={this.props.closeInfoCookies}
+                  title="Close"
                 >
                   x
                 </span>
               </div>
             </div>
           </div>
-        </div>
         : "" }
       </div>
     );

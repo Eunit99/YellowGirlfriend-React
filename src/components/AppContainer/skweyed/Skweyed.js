@@ -18,7 +18,9 @@ class Skweyed extends Component {
           cookiesAccept={this.props.cookiesAccept}
           isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
           isSuggestAcceptCookiesDisplayed={this.props.isSuggestAcceptCookiesDisplayed}
-          closeInfo={this.props.closeInfo}
+          isSuggestInputNameDisplayed={this.props.isSuggestInputNameDisplayed}
+          closeInfoCookies={this.props.closeInfoCookies}
+          closeInfoInputName={this.props.closeInfoInputName}
         />
         <SocialIconsContainer />
       </div>

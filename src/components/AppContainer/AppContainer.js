@@ -18,7 +18,8 @@ class AppContainer extends Component {
       isMessageScreenDisplayed: false, //Hide Message component by default
       visitorAcceptCookies: false, //visitor has not accepted cookies consent
       isCookiesConsentDisplayed: false, // cookies message is not displayed by default
-      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie by default
+      isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie by default
+      isSuggestInputNameDisplayed: false, // Hide suggestion to enter name by default
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -29,13 +30,16 @@ class AppContainer extends Component {
   appStarterButton() {
     this.setState({
       visitorName: this.state.visitorName,
-      isMessageScreenDisplayed: true
+      isMessageScreenDisplayed: true, // Display message component when appStarterButton is clicked
+      isSuggestInputNameDisplayed: false, //Sets suggestion of input name to false
+
     })
   }
 
   onChangeHandler(e) {
     this.setState({
-      visitorName: e.target.value
+      visitorName: e.target.value,
+      isSuggestInputNameDisplayed: false, //Sets suggestion of input name to false
     })
   }
 
@@ -52,20 +56,28 @@ class AppContainer extends Component {
     }, 2000);
 
     setTimeout(() => {
-      var visitorAcceptCookies = this.state.visitorAcceptCookies;
+      var visitorAcceptCookies = this.state.visitorAcceptCookies,
+          visitorName = this.state.visitorName;
 
       if (visitorAcceptCookies === false) {
         this.setState({
           isSuggestAcceptCookiesDisplayed: true
         })
+      };
+
+      if (visitorName === "") {
+        this.setState({
+          isSuggestInputNameDisplayed: true
+        }) 
       }
     },
-      5000)
+      6000)
   }
 
   componentWillUnmount() {
     this.setState({
-      isCookiesConsentDisplayed: false
+      isCookiesConsentDisplayed: false,
+      // isSuggestInputNameDisplayed: false
     })
   }
 
@@ -73,8 +85,7 @@ class AppContainer extends Component {
     this.setState({
       isCookiesConsentDisplayed: false, //cookies message is not displayed as user accepts cookie consent
       visitorAcceptCookies: true, //visitor has accepted cookies consent
-      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie by default when button is clicked
-
+      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie when button is clicked
     })
   }
 
@@ -84,9 +95,16 @@ class AppContainer extends Component {
     })
   }
 
-  closeInfo =() => {
+  closeInfoInputName =() => {
     this.setState({
-      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie by default when close is clicked
+      isSuggestInputNameDisplayed: false, // Hide acceptance of suggestion to enter name when close is clicked
+
+    })
+  }
+  
+  closeInfoCookies = () => {
+    this.setState({
+      isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie when close is clicked
     })
   } 
 
@@ -104,13 +122,15 @@ class AppContainer extends Component {
                 <Skweyed
                   handleScrollClick={this.handleScrollClick}
                   onChangeHandler={this.onChangeHandler}
-                  closeInfo={this.closeInfo}
+                  closeInfoCookies={this.closeInfoCookies}
+                  closeInfoInputName={this.closeInfoInputName}
                   visitorName={this.state.visitorName}
                   appStarterButton={this.appStarterButton}
                   cookiesAccept={this.cookiesAccept}
                   isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
                   visitorAcceptCookies={this.state.visitorAcceptCookies}
                   isSuggestAcceptCookiesDisplayed={this.state.isSuggestAcceptCookiesDisplayed}
+                  isSuggestInputNameDisplayed={this.state.isSuggestInputNameDisplayed}
                 />
 
                 <Messages
