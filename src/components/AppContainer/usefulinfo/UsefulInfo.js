@@ -6,7 +6,7 @@ class UsefulInfo extends Component {
   constructor() {
     super();
     this.state = {
-
+      
     }
   }
 
@@ -18,14 +18,16 @@ class UsefulInfo extends Component {
 
   }
 
-  componentWillUnmount() {
-
-  }
-
   render() {
     return (
       <div>
-        <SuggestInputName />
+        <SuggestInputName
+          isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
+          cookiesAccept={this.props.cookiesAccept}
+          isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
+          visitorAcceptCookies={this.props.visitorAcceptCookies}
+          isSuggestInputNameDisplayed={this.state.isSuggestInputNameDisplayed}
+        />
       </div>
     );
   }

@@ -1,78 +1,57 @@
-.cookies-consent-container {
+.info-container {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  border: 1px solid #e8ac17;
+  color: #e8ac17;
+  background-color: #faeed1;
   position: fixed;
-  bottom: 0vh;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 3;
-  background-color: #0f0f0f;
-  padding: 1.425rem;
-  width: 100%;
   overflow-x: hidden;
   transition: all linear 1s;
+  padding: 1rem;
+  margin: auto;
 }
 
-.cookies-consent-text {
+.info-text {
   font-size: small;
-  font-family: "Raleway", sans-serif;
 }
 
-.cookies-consent-text--span span {
-  display: inline-block;
+.close-btn {
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.cookies-title {
-  font-size: medium;
-}
-
-.cookies-title,
-.cookies-cta,
-.cookies-cta-inline {
-  font-weight: 600;
-  transition: all linear 0.6s;
-}
-
-.cookies-cta,
-.cookies-cta-inline {
-  cursor: pointer;
-}
-
-.cookies-cta {
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
-.cookies-cta-inline {
-  border: 0;
-  padding-bottom: 3px;
-  border-bottom: 2px solid #e8ac17;
-}
-
-.cookies-cta--learn {
-  background-color: #555;
-}
-
-.cookies-cta--accept {
-  background-color: #e8ac17;
-}
-
-.cookies-cta--learn:hover {
-  background-color: #1f1c1c;
-}
-
-.cookies-cta--accept:hover {
-  background-color: #ce9505;
-}
-
-@media screen and (min-width: 768px) {
-  .cookies-consent-container {
-    padding: 1.625rem;
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .info-container {
+    width: 94%;
+    position: fixed;
+    top: 2vh;
+    left: 0;
+    right: 0;
+    padding: 1.425rem;
   }
 
-  .cookies-cta {
-    padding: 14px 34px;
+  .info-text {
+    font-size: large;
+    float: right;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .info-container {
+    width: 65%;
+    position: fixed;
+    top: 3vh;
+    left: 0;
+    right: 0;
+    padding: 1.425rem;
   }
 
-  .cookies-consent-text--span span {
-    display: inline;
+  .info-text {
+    font-size: large;
   }
 }

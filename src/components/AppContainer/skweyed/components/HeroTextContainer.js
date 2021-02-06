@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import WelcomeInputContainer from './WelcomeInputContainer';
 import ReactTooltip from 'react-tooltip'
 import CookiesConsent from './cookies-consent/CookiesConsent';
+import UsefulInfo from '../../usefulinfo/UsefulInfo';
+
 
 class HeroTextContainer extends Component {
   render() {
@@ -64,6 +66,13 @@ class HeroTextContainer extends Component {
         <CookiesConsent
           cookiesAccept={this.props.cookiesAccept}
           isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
+        />
+
+        <UsefulInfo
+          isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
+          cookiesAccept={this.props.cookiesAccept}
+          isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
+          visitorAcceptCookies={this.props.visitorAcceptCookies}
         />
       </div>
     );

@@ -80,6 +80,7 @@ class AppContainer extends Component {
             <div className="content animated fadeIn">
               <div className="row h-100">
                 {/* Content starts here */}
+
                 <Skweyed
                   handleScrollClick={this.handleScrollClick}
                   onChangeHandler={this.onChangeHandler}
