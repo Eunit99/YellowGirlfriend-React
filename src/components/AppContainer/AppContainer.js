@@ -17,7 +17,8 @@ class AppContainer extends Component {
       visitorName: "",
       isMessageScreenDisplayed: false, //Hide Message component by default
       visitorAcceptCookies: false, //visitor has not accepted cookies consent
-      isCookiesConsentDisplayed: false // cookies message is not displayed by default
+      isCookiesConsentDisplayed: false, // cookies message is not displayed by default
+      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie by default
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -49,6 +50,17 @@ class AppContainer extends Component {
         isCookiesConsentDisplayed: true //cookies message is displayed to user after 2s
       })
     }, 2000);
+
+    setTimeout(() => {
+      var visitorAcceptCookies = this.state.visitorAcceptCookies;
+
+      if (visitorAcceptCookies === false) {
+        this.setState({
+          isSuggestAcceptCookiesDisplayed: true
+        })
+      }
+    },
+      5000)
   }
 
   componentWillUnmount() {
@@ -59,8 +71,10 @@ class AppContainer extends Component {
 
   cookiesAccept = () => {
     this.setState({
-      isCookiesConsentDisplayed: false, //cookies message is not displayed by as user accepts cookie consent
-      visitorAcceptCookies: true //visitor has accepted cookies consent
+      isCookiesConsentDisplayed: false, //cookies message is not displayed as user accepts cookie consent
+      visitorAcceptCookies: true, //visitor has accepted cookies consent
+      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie by default when button is clicked
+
     })
   }
 
@@ -69,6 +83,12 @@ class AppContainer extends Component {
 
     })
   }
+
+  closeInfo =() => {
+    this.setState({
+      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie by default when close is clicked
+    })
+  } 
 
   render() {
     return (
@@ -84,11 +104,13 @@ class AppContainer extends Component {
                 <Skweyed
                   handleScrollClick={this.handleScrollClick}
                   onChangeHandler={this.onChangeHandler}
+                  closeInfo={this.closeInfo}
                   visitorName={this.state.visitorName}
                   appStarterButton={this.appStarterButton}
                   cookiesAccept={this.cookiesAccept}
                   isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
                   visitorAcceptCookies={this.state.visitorAcceptCookies}
+                  isSuggestAcceptCookiesDisplayed={this.state.isSuggestAcceptCookiesDisplayed}
                 />
 
                 <Messages

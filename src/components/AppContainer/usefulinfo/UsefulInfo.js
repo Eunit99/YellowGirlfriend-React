@@ -4,38 +4,28 @@ import SuggestAcceptCookies from './components/suggestacceptcookies/suggestAccep
 // import SuggestInputName from './components/suggestinputname/SuggestInputName'
 
 class UsefulInfo extends Component {
-  constructor() {
-    super();
-    this.state = {
-      
-    }
-  }
-
-  componentWillMount() {
-
-  }
-
-  componentDidMount() {
-
-  }
 
   render() {
     return (
       <div>
         {/* <SuggestInputName
+          isSuggestAcceptCookiesDisplayed={this.props.isSuggestAcceptCookiesDisplayed}
           isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
           cookiesAccept={this.props.cookiesAccept}
           isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
           visitorAcceptCookies={this.props.visitorAcceptCookies}
           isSuggestInputNameDisplayed={this.state.isSuggestInputNameDisplayed}
+          closeInfo={this.props.closeInfo}
         /> */}
 
         <SuggestAcceptCookies
+          isSuggestAcceptCookiesDisplayed={this.props.isSuggestAcceptCookiesDisplayed}
           isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
           cookiesAccept={this.props.cookiesAccept}
           isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
           visitorAcceptCookies={this.props.visitorAcceptCookies}
-          SuggestAcceptCookies={this.state.SuggestAcceptCookies}
+          SuggestAcceptCookies={this.props.SuggestAcceptCookies}
+          closeInfo={this.props.closeInfo}
         />
       </div>
     );
