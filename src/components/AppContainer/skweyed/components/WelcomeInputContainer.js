@@ -7,9 +7,11 @@ class WelcomeInputContainer extends Component {
   
 
   render() {
-
+    let isAppStarterInputDisplayed = this.props.isAppStarterInputDisplayed;
+       
     return(
-      <div className="input-group input-group--intro">
+      <div className={`input-group input-group--intro animated ${isAppStarterInputDisplayed ? "fadeIn" : "fadeOut"} `}
+      >
         <AppStarterInput
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}

@@ -26,6 +26,7 @@ class Skweyed extends Component {
           shakeAcceptLearnBtn={this.props.shakeAcceptLearnBtn}
           learnMoreAboutCookies={this.props.learnMoreAboutCookies}
           isTermsOfServiceDescriptionDisplayed={this.props.isTermsOfServiceDescriptionDisplayed}
+          isAppStarterInputDisplayed={this.props.isAppStarterInputDisplayed}
         />
         <SocialIconsContainer />
       </div>

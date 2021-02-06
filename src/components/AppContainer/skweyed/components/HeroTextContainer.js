@@ -9,7 +9,7 @@ class HeroTextContainer extends Component {
   render() {
     
     let headingText = "We believe you know your girlfriend cheats on you",
-    hour = new Date().getHours();
+        hour = new Date().getHours();
 
     if (hour < 12) {
       headingText = "We believe you know your girlfriend cheats on you"
@@ -56,13 +56,14 @@ class HeroTextContainer extends Component {
           />
         </div>
 
-				<WelcomeInputContainer
+        <WelcomeInputContainer
           handleScrollClick={this.props.handleScrollClick}
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}
           appStarterButton={this.props.appStarterButton}
           shakeVisitorInputNameField={this.props.shakeVisitorInputNameField}
-        />
+          isAppStarterInputDisplayed={this.props.isAppStarterInputDisplayed}
+        /> 
 
         <CookiesConsent
           cookiesAccept={this.props.cookiesAccept}

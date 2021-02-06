@@ -16,6 +16,7 @@ class AppContainer extends Component {
     this.state = {
       visitorName: "",
       isMessageScreenDisplayed: true, //Hide Message component by default
+      isAppStarterInputDisplayed: true, // Display app starter input by default
       visitorAcceptCookies: false, //visitor has not accepted cookies consent
       isCookiesConsentDisplayed: false, // cookies message is not displayed by default
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie by default
@@ -44,7 +45,7 @@ class AppContainer extends Component {
       })
     }
 
-    // console.log(`visitorName: ${this.state.visitorName}`)
+    console.log(`visitorName: ${this.state.visitorName}`)
   }
 
   onChangeHandler(e) {
@@ -118,10 +119,12 @@ class AppContainer extends Component {
       isTermsOfServiceDescriptionDisplayed: true, // Displays terms of service description to visitor
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie when button is clicked
       visitorAcceptCookies: true, //visitor has accepted cookies consent
+      isAppStarterInputDisplayed: false, // Hide app starter input when learn more button is clicked
+      isSuggestInputNameDisplayed: false, // Hide suggestion to enter name
     })
 
     // console.log(`Learn more button was clicked!`)
-    console.log(`Is Message Screen Displayed? ${this.state.isMessageScreenDisplayed}`)
+    // console.log(`Is Message Screen Displayed? ${this.state.isMessageScreenDisplayed}`)
   }
 
   closeInfoInputName =() => {
@@ -182,6 +185,7 @@ class AppContainer extends Component {
                   shakeAcceptLearnBtn={this.state.shakeAcceptLearnBtn}
                   learnMoreAboutCookies={this.learnMoreAboutCookies}
                   isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
+                  isAppStarterInputDisplayed={this.state.isAppStarterInputDisplayed}
                 />
 
                 <Messages
