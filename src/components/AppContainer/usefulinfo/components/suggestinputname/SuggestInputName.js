@@ -19,7 +19,7 @@ class SuggestInputName extends Component {
           <div className={`
             info-container
             animated
-            ${isSuggestInputNameDisplayed ? "slideInDown" : ""}
+            ${isSuggestInputNameDisplayed ? "slideInDown" : "fadeOut"}
             `}
           >
             {/* Content goes here */}

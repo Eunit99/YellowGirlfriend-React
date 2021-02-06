@@ -106,9 +106,14 @@ class AppContainer extends Component {
     if (this.state.visitorName === "") {
       this.setState({
         isMessageScreenDisplayed: false, // Do not display message component when accept button is clicked if name input is empty
-        shakeVisitorInputNameField: true, // Shake visitor input field when input empty
         isSuggestInputNameDisplayed: true, // Display suggestion to input name when accept button is clicked without providing a name
       })
+
+      setTimeout(() => {
+        this.setState({
+          shakeVisitorInputNameField: true, // Shake visitor input field when input empty
+        })
+      }, 2000);
     }
   }
 
