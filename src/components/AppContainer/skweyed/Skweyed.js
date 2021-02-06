@@ -22,6 +22,7 @@ class Skweyed extends Component {
           closeInfoCookies={this.props.closeInfoCookies}
           closeInfoInputName={this.props.closeInfoInputName}
           shakeCookieSuggestion={this.props.shakeCookieSuggestion}
+          shakeVisitorInputNameField={this.props.shakeVisitorInputNameField}
         />
         <SocialIconsContainer />
       </div>

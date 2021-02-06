@@ -23,11 +23,13 @@
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  text-align: right;
+  float: right;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .info-container {
-    width: 94%;
+    width: 90%;
     position: fixed;
     top: 2vh;
     left: 0;
@@ -37,8 +39,6 @@
 
   .info-text {
     font-size: large;
-    float: right;
-    text-align: right;
   }
 }
 

@@ -21,6 +21,7 @@ class AppContainer extends Component {
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie by default
       isSuggestInputNameDisplayed: false, // Hide suggestion to enter name by default
       shakeCookieSuggestion: false, // Do not shake acceptance of cookie by default
+      shakeVisitorInputNameField: false, // Do not shake visitor input field by default
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -104,8 +105,16 @@ class AppContainer extends Component {
   closeInfoInputName =() => {
     this.setState({
       isSuggestInputNameDisplayed: false, // Hide acceptance of suggestion to enter name when close is clicked
-
     })
+
+    // If input field for name is still empty and visitor clicks close info btn
+    if (this.state.isSuggestInputNameDisplayed) {
+      this.setState({
+        shakeVisitorInputNameField: true, // Shake visitor input field
+      })
+
+      console.log(`Applied shake to visitor name input field`)
+    }
   }
   
   closeInfoCookies = () => {
@@ -138,6 +147,7 @@ class AppContainer extends Component {
                   isSuggestAcceptCookiesDisplayed={this.state.isSuggestAcceptCookiesDisplayed}
                   isSuggestInputNameDisplayed={this.state.isSuggestInputNameDisplayed}
                   shakeCookieSuggestion={this.state.shakeCookieSuggestion}
+                  shakeVisitorInputNameField={this.state.shakeVisitorInputNameField}
                 />
 
                 <Messages

@@ -61,6 +61,7 @@ class HeroTextContainer extends Component {
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}
           appStarterButton={this.props.appStarterButton}
+          shakeVisitorInputNameField={this.props.shakeVisitorInputNameField}
         />
 
         <CookiesConsent

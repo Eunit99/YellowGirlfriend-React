@@ -13,7 +13,7 @@ class SuggestAcceptCookies extends Component {
 
     // For development use only
     // console.log(`isSuggestAcceptCookiesDisplayed? ${isSuggestAcceptCookiesDisplayed}`)
-    console.log(`shakeCookieSuggestion? ${shakeCookieSuggestion}`)
+    // console.log(`shakeCookieSuggestion? ${shakeCookieSuggestion}`)
     
     return (
       <div className="contain">
@@ -36,7 +36,7 @@ class SuggestAcceptCookies extends Component {
 
               <div className="col-8">
                 <span className="info-text">
-                  Please accept our Terms of Service to start the test or click on "Learn more" to read the terms.
+                  Please click on "Accept" to accept our Terms of Service to start your test or click on "Learn more" to read the terms.
                 </span>
               </div>
 
