@@ -47,7 +47,7 @@ class CookiesConsent extends Component {
               <span
                 id="tos"
                 className="cookies-cta cookies-cta--learn animated"
-                onClick={this.props.displayTermsOfService}
+                onClick={() => { this.props.learnMoreAboutCookies();}}
               >
                 Learn more
               </span>

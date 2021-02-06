@@ -99,7 +99,7 @@ class AppContainer extends Component {
 
   learnMoreAboutCookies = () => {
     this.setState({
-
+      isCookiesConsentDisplayed: false, //cookies message is not displayed as user accepts cookie consent
     })
   }
 
@@ -159,6 +159,7 @@ class AppContainer extends Component {
                   shakeCookieSuggestion={this.state.shakeCookieSuggestion}
                   shakeVisitorInputNameField={this.state.shakeVisitorInputNameField}
                   shakeAcceptLearnBtn={this.state.shakeAcceptLearnBtn}
+                  learnMoreAboutCookies={this.learnMoreAboutCookies}
                 />
 
                 <Messages

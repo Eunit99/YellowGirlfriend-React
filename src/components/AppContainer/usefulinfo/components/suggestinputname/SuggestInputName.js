@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../suggestinputname/assets/suggestInputName.css';
+import '../suggestinputname/assets/SuggestInputName.css';
 import exclamation24 from '../../assets/img/exclamation-24.png';
 import exclamation48 from '../../assets/img/exclamation-48.png';
 
