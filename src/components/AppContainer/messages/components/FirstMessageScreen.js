@@ -12,12 +12,20 @@ class FirstMessageScreen extends Component {
       greetingText = `Hello!`
     }
 
+    let isTermsOfServiceDescriptionDisplayed = this.props.isTermsOfServiceDescriptionDisplayed;
+    console.log(`isTermsOfServiceDescriptionDisplayed? ${isTermsOfServiceDescriptionDisplayed}`)
+
     return (
       <div className="message-container-intro">
         <div className="long-into">
           {greetingText} 
         </div>
         <div className="small-into">Welcome to yellow girlfriend.</div>
+
+        {isTermsOfServiceDescriptionDisplayed ? 
+          <div className="small-into terms-of-service-container">Terms of Service</div> : ""
+        }
+
         {/* <FirstMessageInputContainer /> */}
       </div>
     );

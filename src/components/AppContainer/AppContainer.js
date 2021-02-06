@@ -15,7 +15,7 @@ class AppContainer extends Component {
     super()
     this.state = {
       visitorName: "",
-      isMessageScreenDisplayed: false, //Hide Message component by default
+      isMessageScreenDisplayed: true, //Hide Message component by default
       visitorAcceptCookies: false, //visitor has not accepted cookies consent
       isCookiesConsentDisplayed: false, // cookies message is not displayed by default
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie by default
@@ -23,6 +23,7 @@ class AppContainer extends Component {
       shakeCookieSuggestion: false, // Do not shake acceptance of cookie by default
       shakeVisitorInputNameField: false, // Do not shake visitor input field by default
       shakeAcceptLearnBtn: false, // Do not shake accept or learn buttons by default
+      isTermsOfServiceDescriptionDisplayed: false, // Do not displays terms of service description to visitor by default
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -99,8 +100,15 @@ class AppContainer extends Component {
 
   learnMoreAboutCookies = () => {
     this.setState({
+      isMessageScreenDisplayed: true, // Display message component when Learn more button is clicked
       isCookiesConsentDisplayed: false, //cookies message is not displayed as user accepts cookie consent
+      isTermsOfServiceDescriptionDisplayed: true, // Displays terms of service description to visitor
+      isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie when button is clicked
+      visitorAcceptCookies: true, //visitor has accepted cookies consent
     })
+
+    // console.log(`Learn more button was clicked!`)
+    console.log(`Is Message Screen Displayed? ${this.state.isMessageScreenDisplayed}`)
   }
 
   closeInfoInputName =() => {
@@ -160,6 +168,7 @@ class AppContainer extends Component {
                   shakeVisitorInputNameField={this.state.shakeVisitorInputNameField}
                   shakeAcceptLearnBtn={this.state.shakeAcceptLearnBtn}
                   learnMoreAboutCookies={this.learnMoreAboutCookies}
+                  isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
                 />
 
                 <Messages
@@ -171,6 +180,7 @@ class AppContainer extends Component {
                   cookiesAccept={this.cookiesAccept}
                   isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
                   visitorAcceptCookies={this.state.visitorAcceptCookies}
+                  isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
                 />
               </div>
             </div>

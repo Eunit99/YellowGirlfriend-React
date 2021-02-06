@@ -33,6 +33,7 @@ const Messages = (props) => {
         >
           {/* Content starts here */}
           <FirstMessageScreen
+            isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
             user={user}
           />
           <ChatsContainer />
