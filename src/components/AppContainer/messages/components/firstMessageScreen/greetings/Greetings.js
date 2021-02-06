@@ -7,12 +7,12 @@ class Greetings extends Component {
       greetWithoutName = `Hello!`;
       var isVisitor;
 
-      if (user !== undefined) {
+      if (user !== undefined && user !== "") {
         isVisitor = false
       } else {
         isVisitor = true
       }
-    console.log(`isVisitor? ${isVisitor}`)
+    // console.log(`isVisitor? ${isVisitor}`)
 
     return (
       <div className="greeting-container">

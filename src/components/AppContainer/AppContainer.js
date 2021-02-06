@@ -43,6 +43,8 @@ class AppContainer extends Component {
         shakeCookieSuggestion: true, // Shake acceptance of cookie by default
       })
     }
+
+    // console.log(`visitorName: ${this.state.visitorName}`)
   }
 
   onChangeHandler(e) {
@@ -96,6 +98,17 @@ class AppContainer extends Component {
       visitorAcceptCookies: true, //visitor has accepted cookies consent
       isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie when button is clicked
     })
+
+    // console.log(`visitorName: ${this.state.visitorName}`)
+    // console.log(`isSuggestInputNameDisplayed? ${this.state.isSuggestInputNameDisplayed}`)
+    
+    if (this.state.visitorName === "") {
+      this.setState({
+        isMessageScreenDisplayed: false, // Do not display message component when accept button is clicked if name input is empty
+        shakeVisitorInputNameField: true, // Shake visitor input field when input empty
+        isSuggestInputNameDisplayed: true, // Display suggestion to input name when accept button is clicked without providing a name
+      })
+    }
   }
 
   learnMoreAboutCookies = () => {

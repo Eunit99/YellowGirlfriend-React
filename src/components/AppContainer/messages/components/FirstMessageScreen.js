@@ -8,12 +8,17 @@ class FirstMessageScreen extends Component {
   render() {
     
     let isTermsOfServiceDescriptionDisplayed = this.props.isTermsOfServiceDescriptionDisplayed;
-    console.log(`isTermsOfServiceDescriptionDisplayed? ${isTermsOfServiceDescriptionDisplayed}`)
+    // console.log(`isTermsOfServiceDescriptionDisplayed? ${isTermsOfServiceDescriptionDisplayed}`)
 
     return (
       <div className="message-container-intro">
         {isTermsOfServiceDescriptionDisplayed ? 
-          <TermsOfService /> : <Greetings />
+          <TermsOfService
+            user={this.props.user}
+          /> : 
+          <Greetings
+            user={this.props.user}
+          />
         }
 
         {/* <FirstMessageInputContainer /> */}
