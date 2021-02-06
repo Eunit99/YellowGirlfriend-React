@@ -7,19 +7,21 @@ import exclamation48 from '../../assets/img/exclamation-48.png';
 class SuggestAcceptCookies extends Component {
 
   render() {
-    let isSuggestAcceptCookiesDisplayed = this.props.isSuggestAcceptCookiesDisplayed
+    let isSuggestAcceptCookiesDisplayed = this.props.isSuggestAcceptCookiesDisplayed,
+    shakeCookieSuggestion = this.props.shakeCookieSuggestion
+
 
     // For development use only
     // console.log(`isSuggestAcceptCookiesDisplayed? ${isSuggestAcceptCookiesDisplayed}`)
+    console.log(`shakeCookieSuggestion? ${shakeCookieSuggestion}`)
     
-
     return (
       <div className="contain">
         {isSuggestAcceptCookiesDisplayed ? 
           <div className={`
             info-container
             animated
-            ${isSuggestAcceptCookiesDisplayed ? "slideInDown" : ""}
+            ${shakeCookieSuggestion ? "shake" : "slideInDown"}
             `}
           >
             {/* Content goes here */}
@@ -34,7 +36,7 @@ class SuggestAcceptCookies extends Component {
 
               <div className="col-8">
                 <span className="info-text">
-                  Please accept our Terms of Service to start the test.
+                  Please accept our Terms of Service to start the test or click on "Learn more" to read the terms.
                 </span>
               </div>
 

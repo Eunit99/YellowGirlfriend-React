@@ -25,6 +25,7 @@ class UsefulInfo extends Component {
           visitorAcceptCookies={this.props.visitorAcceptCookies}
           SuggestAcceptCookies={this.props.SuggestAcceptCookies}
           closeInfoCookies={this.props.closeInfoCookies}
+          shakeCookieSuggestion={this.props.shakeCookieSuggestion}
         />
       </div>
     );

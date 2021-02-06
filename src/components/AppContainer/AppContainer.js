@@ -20,6 +20,7 @@ class AppContainer extends Component {
       isCookiesConsentDisplayed: false, // cookies message is not displayed by default
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie by default
       isSuggestInputNameDisplayed: false, // Hide suggestion to enter name by default
+      shakeCookieSuggestion: false, // Do not shake acceptance of cookie by default
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -32,8 +33,13 @@ class AppContainer extends Component {
       visitorName: this.state.visitorName,
       isMessageScreenDisplayed: true, // Display message component when appStarterButton is clicked
       isSuggestInputNameDisplayed: false, //Sets suggestion of input name to false
-
     })
+
+    if (!this.state.isSuggestInputNameDisplayed) {
+      this.setState({
+        shakeCookieSuggestion: true, // Shake acceptance of cookie by default
+      })
+    }
   }
 
   onChangeHandler(e) {
@@ -77,7 +83,7 @@ class AppContainer extends Component {
   componentWillUnmount() {
     this.setState({
       isCookiesConsentDisplayed: false,
-      // isSuggestInputNameDisplayed: false
+      isSuggestInputNameDisplayed: false
     })
   }
 
@@ -131,6 +137,7 @@ class AppContainer extends Component {
                   visitorAcceptCookies={this.state.visitorAcceptCookies}
                   isSuggestAcceptCookiesDisplayed={this.state.isSuggestAcceptCookiesDisplayed}
                   isSuggestInputNameDisplayed={this.state.isSuggestInputNameDisplayed}
+                  shakeCookieSuggestion={this.state.shakeCookieSuggestion}
                 />
 
                 <Messages

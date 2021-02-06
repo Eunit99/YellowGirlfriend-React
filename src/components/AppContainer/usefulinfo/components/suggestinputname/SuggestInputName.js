@@ -11,7 +11,7 @@ class SuggestInputName extends Component {
     let isSuggestInputNameDisplayed = this.props.isSuggestInputNameDisplayed;
 
     // For development use only
-    console.log(`isSuggestInputNameDisplayed? ${isSuggestInputNameDisplayed}`)
+    // console.log(`isSuggestInputNameDisplayed? ${isSuggestInputNameDisplayed}`)
 
     return (
       <div className="contain">
