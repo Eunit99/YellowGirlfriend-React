@@ -67,6 +67,7 @@ class HeroTextContainer extends Component {
         <CookiesConsent
           cookiesAccept={this.props.cookiesAccept}
           isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
+          shakeAcceptLearnBtn={this.props.shakeAcceptLearnBtn}
         />
 
         <UsefulInfo

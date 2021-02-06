@@ -22,6 +22,7 @@ class AppContainer extends Component {
       isSuggestInputNameDisplayed: false, // Hide suggestion to enter name by default
       shakeCookieSuggestion: false, // Do not shake acceptance of cookie by default
       shakeVisitorInputNameField: false, // Do not shake visitor input field by default
+      shakeAcceptLearnBtn: false, // Do not shake accept or learn buttons by default
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -78,7 +79,7 @@ class AppContainer extends Component {
         }) 
       }
     },
-      6000)
+      6000) // Display info messages if user does nothing in 6s
   }
 
   componentWillUnmount() {
@@ -113,7 +114,7 @@ class AppContainer extends Component {
         shakeVisitorInputNameField: true, // Shake visitor input field
       })
 
-      console.log(`Applied shake to visitor name input field`)
+      // console.log(`Applied shake to visitor name input field`)
     }
   }
   
@@ -121,6 +122,15 @@ class AppContainer extends Component {
     this.setState({
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie when close is clicked
     })
+
+    // If visitor clicks on close btn without accepting the terms
+    if (this.state.isSuggestAcceptCookiesDisplayed) {
+      this.setState({
+        shakeAcceptLearnBtn: true, // Shake visitor input field
+      })
+
+      // console.log(`Applied shake to "learn more" and "accept" button`)
+    }
   } 
 
   render() {
@@ -148,6 +158,7 @@ class AppContainer extends Component {
                   isSuggestInputNameDisplayed={this.state.isSuggestInputNameDisplayed}
                   shakeCookieSuggestion={this.state.shakeCookieSuggestion}
                   shakeVisitorInputNameField={this.state.shakeVisitorInputNameField}
+                  shakeAcceptLearnBtn={this.state.shakeAcceptLearnBtn}
                 />
 
                 <Messages

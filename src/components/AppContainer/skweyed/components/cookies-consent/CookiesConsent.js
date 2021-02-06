@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './assets/css/CookiesConsent.css'
+import '../../../assets/css/animate.min.css'
 
 class CookiesConsent extends Component {
 
   render() {
-    let isCookiesConsentDisplayed = this.props.isCookiesConsentDisplayed
-    let visitorAcceptCookies = this.props.visitorAcceptCookies
+    let isCookiesConsentDisplayed = this.props.isCookiesConsentDisplayed,
+        visitorAcceptCookies = this.props.visitorAcceptCookies,
+        shakeAcceptLearnBtn = this.props.shakeAcceptLearnBtn
 
     // For development use only
     // console.log(`isCookiesConsentDisplayed? ${isCookiesConsentDisplayed}`)
@@ -41,19 +43,19 @@ class CookiesConsent extends Component {
             </div>
           </div>
           <div className="row cookies-consent-text mt-3 mt-sm-4">
-            <div className="col-6">
+            <div className={`col-6 animated ${shakeAcceptLearnBtn ? "shake" : ""}`}>
               <span
                 id="tos"
-                className="cookies-cta cookies-cta--learn"
+                className="cookies-cta cookies-cta--learn animated"
                 onClick={this.props.displayTermsOfService}
               >
                 Learn more
               </span>
             </div>
-            <div className="col-6 text-right">
+            <div className={`col-6 text-right animated ${shakeAcceptLearnBtn ? "shake" : ""}`}>
               <span
                 id="cookiesAccept"
-                className="cookies-cta cookies-cta--accept"
+                className="cookies-cta cookies-cta--accept animated"
                 onClick={this.props.cookiesAccept}
               > Accept
               </span>
