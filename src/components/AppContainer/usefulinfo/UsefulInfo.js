@@ -15,7 +15,7 @@ class UsefulInfo extends Component {
           isCookiesConsentDisplayed={this.props.isCookiesConsentDisplayed}
           visitorAcceptCookies={this.props.visitorAcceptCookies}
           closeInfoInputName={this.props.closeInfoInputName}
-        /> 
+        />
 
         <SuggestAcceptCookies
           isSuggestAcceptCookiesDisplayed={this.props.isSuggestAcceptCookiesDisplayed}
