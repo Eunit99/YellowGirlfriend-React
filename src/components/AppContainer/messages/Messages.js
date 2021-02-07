@@ -8,10 +8,9 @@ import '../../AppContainer/assets/css/animate.min.css'
 const Messages = (props) => {
   let user = props.visitorName,
       isMessageScreenDisplayed = props.isMessageScreenDisplayed,
-      messageRef = useRef();
-    
-  let displayMessageScreen,
-    visitorAcceptedCookiesConsent = props.visitorAcceptCookies
+      messageRef = useRef(),
+      displayMessageScreen,
+      visitorAcceptedCookiesConsent = props.visitorAcceptCookies
 
   if (isMessageScreenDisplayed === true && visitorAcceptedCookiesConsent === true) {
      displayMessageScreen = true

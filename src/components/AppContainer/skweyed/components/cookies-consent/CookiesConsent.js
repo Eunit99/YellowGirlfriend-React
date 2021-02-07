@@ -32,7 +32,7 @@ class CookiesConsent extends Component {
                 <span
                   className="cookies-cta-inline"
                   id="tos"
-                  onClick={this.props.displayTermsOfService}
+                  onClick={this.props.learnMoreAboutCookies}
                 > cookie policy</span>.
               </span>
               &nbsp;

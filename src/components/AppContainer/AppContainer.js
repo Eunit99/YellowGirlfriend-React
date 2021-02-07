@@ -45,7 +45,13 @@ class AppContainer extends Component {
       })
     }
 
-    console.log(`visitorName: ${this.state.visitorName}`)
+    // console.log(`visitorName: ${this.state.visitorName}`)
+
+    if (!this.state.visitorAcceptCookies) {
+      this.setState({
+        shakeAcceptLearnBtn: true, // Shake accept and learn buttons if cookie consent is not accepted and appStarterBtn clicked
+      })
+    }
   }
 
   onChangeHandler(e) {
@@ -79,9 +85,16 @@ class AppContainer extends Component {
 
       if (visitorName === "") {
         this.setState({
-          isSuggestInputNameDisplayed: true
+          isSuggestInputNameDisplayed: true // Display suggestion to input name if name is blank
+        })
+      }
+
+      if (visitorName === "" && this.state.isTermsOfServiceDescriptionDisplayed === true) {
+        this.setState({
+          isSuggestInputNameDisplayed: false
         }) 
       }
+      
     },
       6000) // Display info messages if user does nothing in 6s
   }
