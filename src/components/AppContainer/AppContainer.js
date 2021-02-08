@@ -15,8 +15,8 @@ class AppContainer extends Component {
     super()
     this.state = {
       visitorName: "",
-      isMessageScreenDisplayed: true, //Hide Message component by default
-      isAppStarterInputDisplayed: true, // Display app starter input by default
+      isMessageScreenDisplayed: false, //Hide Message component by default
+      isAppStarterInputDisplayed: false, // Hide app starter input by default
       visitorAcceptCookies: false, //visitor has not accepted cookies consent
       isCookiesConsentDisplayed: false, // cookies message is not displayed by default
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie by default
@@ -37,11 +37,12 @@ class AppContainer extends Component {
       visitorName: this.state.visitorName,
       isMessageScreenDisplayed: true, // Display message component when appStarterButton is clicked
       isSuggestInputNameDisplayed: false, //Sets suggestion of input name to false
+      isAppStarterInputDisplayed: false, // Hide input when app starter button is clicked
     })
 
     if (!this.state.isSuggestInputNameDisplayed) {
       this.setState({
-        shakeCookieSuggestion: true, // Shake acceptance of cookie by default
+        shakeCookieSuggestion: true, // Shake acceptance of cookie
       })
     }
 
@@ -110,7 +111,8 @@ class AppContainer extends Component {
     this.setState({
       isCookiesConsentDisplayed: false, //cookies message is not displayed as user accepts cookie consent
       visitorAcceptCookies: true, //visitor has accepted cookies consent
-      isSuggestAcceptCookiesDisplayed: false // Hide acceptance of cookie when button is clicked
+      isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie when button is clicked
+      isAppStarterInputDisplayed: true, // Displays app starter input when cookies is accepted
     })
 
     // console.log(`visitorName: ${this.state.visitorName}`)
@@ -204,6 +206,7 @@ class AppContainer extends Component {
                   learnMoreAboutCookies={this.learnMoreAboutCookies}
                   isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
                   isAppStarterInputDisplayed={this.state.isAppStarterInputDisplayed}
+                  isMessageScreenDisplayed={this.state.isMessageScreenDisplayed}
                 />
 
                 <Messages
@@ -216,6 +219,7 @@ class AppContainer extends Component {
                   isCookiesConsentDisplayed={this.state.isCookiesConsentDisplayed}
                   visitorAcceptCookies={this.state.visitorAcceptCookies}
                   isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
+                  isAppStarterInputDisplayed={this.state.isAppStarterInputDisplayed}
                 />
               </div>
             </div>

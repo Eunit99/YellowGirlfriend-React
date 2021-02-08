@@ -1,0 +1,13 @@
+.scroll {
+  display: block;
+  float: right;
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .scroll {
+    display: none
+  }
+}

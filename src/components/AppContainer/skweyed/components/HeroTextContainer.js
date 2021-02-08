@@ -3,14 +3,18 @@ import WelcomeInputContainer from './WelcomeInputContainer';
 import ReactTooltip from 'react-tooltip'
 import CookiesConsent from './cookies-consent/CookiesConsent';
 import UsefulInfo from '../../usefulinfo/UsefulInfo';
+import Scroll from './scrolldown/Scroll';
 
 
 class HeroTextContainer extends Component {
   render() {
     
     let headingText = "We believe you know your girlfriend cheats on you",
+        isMessageScreenDisplayed = this.props.isMessageScreenDisplayed,
+        isAppStarterInputDisplayed = this.props.isAppStarterInputDisplayed,
         hour = new Date().getHours();
-
+    console.log(`isMessageScreenDisplayed? ${isMessageScreenDisplayed}`);
+    
     if (hour < 12) {
       headingText = "We believe you know your girlfriend cheats on you"
     } else if (hour >= 12 && hour < 17) {
@@ -26,7 +30,9 @@ class HeroTextContainer extends Component {
         <div className="hero-heading mb-4 mb-sm-5">
           <h1>
             {headingText}
-            <span data-tip="This is just our opinion and shouldn't be considered a professional advice.">*</span>
+            <span
+              data-tip="This is just our opinion and shouldn't be<br>
+                        considered a professional advice.">*</span>
           </h1>
         </div>
         <div className="mb-3 mb-sm-3">
@@ -56,6 +62,7 @@ class HeroTextContainer extends Component {
           />
         </div>
 
+        {isAppStarterInputDisplayed?
         <WelcomeInputContainer
           handleScrollClick={this.props.handleScrollClick}
           onChangeHandler={this.props.onChangeHandler}
@@ -63,7 +70,15 @@ class HeroTextContainer extends Component {
           appStarterButton={this.props.appStarterButton}
           shakeVisitorInputNameField={this.props.shakeVisitorInputNameField}
           isAppStarterInputDisplayed={this.props.isAppStarterInputDisplayed}
-        /> 
+          isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
+        /> : ""
+        }
+
+        {isMessageScreenDisplayed ?
+          <Scroll
+            isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
+          /> : ""
+        }
 
         <CookiesConsent
           cookiesAccept={this.props.cookiesAccept}
