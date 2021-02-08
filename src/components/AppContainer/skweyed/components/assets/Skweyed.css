@@ -31,7 +31,7 @@
 }
 
 .skweyed .skweyed-content .hero-heading {
-  font-family: Parisienne;
+  font-family: Raleway, sans-serif;
 }
 
 .skweyed .skweyed-content h1 {
@@ -43,7 +43,7 @@
 }
 
 .skweyed .skweyed-content p strong {
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .skweyed .skweyed-content .input-group {
@@ -66,7 +66,7 @@
 
 .skweyed .skweyed-content .input-group--intro button {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1rem;

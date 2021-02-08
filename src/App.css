@@ -54,10 +54,12 @@ html {
 body {
   height: 100%;
   position: relative;
-  font-weight: 200;
+  font-weight: 100;
   overflow: hidden;
   scroll-behavior: smooth;
-  font-family: "Raleway", sans-serif;
+  font-family: Mulish, sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -66,15 +68,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 300;
 }
 
 /* Custom fonts for Yellow Girlfriend  */
-
-@font-face {
-  font-family: Parisienne;
-  src: local('Parisienne'), url('./components/AppContainer/assets/fonts/parisienne/Parisienne-Regular.ttf') format('truetype');
-}
 
 @font-face {
   font-family: Mulish;
