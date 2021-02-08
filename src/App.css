@@ -54,10 +54,12 @@ html {
 body {
   height: 100%;
   position: relative;
-  font-weight: 200;
+  font-weight: 100;
   overflow: hidden;
   scroll-behavior: smooth;
   font-family: Mulish, sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
 }
 
 h1,
