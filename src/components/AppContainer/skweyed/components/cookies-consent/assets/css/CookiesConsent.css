@@ -27,8 +27,12 @@
 .cookies-title,
 .cookies-cta,
 .cookies-cta-inline {
-  font-weight: 600;
   transition: all linear 0.6s;
+}
+
+.cookies-title,
+.cookies-cta {
+  font-weight: 600;
 }
 
 .cookies-cta,

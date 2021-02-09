@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import './components/assets/Message.css';
-import ChatsContainer from './components/ChatsContainer';
+import Chats from './components/Chats';
 import FirstMessageScreen from './components/FirstMessageScreen';
 import '../../AppContainer/assets/css/animate.min.css'
+// import ChatInput from './components/chatsinput/ChatInput';
 
 
 const Messages = (props) => {
@@ -35,7 +36,8 @@ const Messages = (props) => {
             isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
             user={user}
           />
-          <ChatsContainer />
+          <Chats />
+          {/* <ChatInput /> */}
         </div>
       }
     </div>

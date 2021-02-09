@@ -13,7 +13,7 @@ class HeroTextContainer extends Component {
         isMessageScreenDisplayed = this.props.isMessageScreenDisplayed,
         isAppStarterInputDisplayed = this.props.isAppStarterInputDisplayed,
         hour = new Date().getHours();
-    console.log(`isMessageScreenDisplayed? ${isMessageScreenDisplayed}`);
+    // console.log(`isMessageScreenDisplayed? ${isMessageScreenDisplayed}`);
     
     if (hour < 12) {
       headingText = "We believe you know your girlfriend cheats on you"
