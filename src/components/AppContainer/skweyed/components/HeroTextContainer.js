@@ -44,7 +44,7 @@ class HeroTextContainer extends Component {
             "<span
               className="title-text"
               data-tip="Yellow girlfriend is our own term given to<br>
-              cheating girlfriends and has nothing to do with any race. <br>
+              cheating girlfriends and has nothing to do with any race or skin colour. <br>
               Please read our Terms of Service to learn more."
             >
               yellow girlfriend
