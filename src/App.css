@@ -57,7 +57,7 @@ body {
   font-weight: 100;
   overflow: hidden;
   scroll-behavior: smooth;
-  font-family: Mulish, sans-serif;
+  font-family: Muli, sans-serif;
   font-style: normal;
   scroll-behavior: smooth;
 }
@@ -83,3 +83,5 @@ h6 {
   font-family: Raleway;
   src: local('Raleway'), url('./components/AppContainer/assets/fonts/raleway/Raleway-VariableFont_wght.ttf') format('truetype');
 }
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
