@@ -1,0 +1,38 @@
+.chat-loader {
+  transform: translate(20vw, 40vh);
+  -webkit-transform: translate(20vw, 40vh);
+  -moz-transform: translate(20vw, 40vh);
+  -ms-transform: translate(20vw, 40vh);
+  -o-transform: translate(20vw, 40vh);
+}
+
+.loading-img {
+  width: 170px;
+  height: 70px;
+  background-color: #f6dea2;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .chat-loader {
+    transform: translate(30vw, 40vh);
+    -webkit-transform: translate(30vw, 40vh);
+    -moz-transform: translate(30vw, 40vh);
+    -ms-transform: translate(30vw, 40vh);
+    -o-transform: translate(30vw, 40vh);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chat-loader {
+    transform: translate(10vw, 35vh);
+    -webkit-transform: translate(10vw, 35vh);
+    -moz-transform: translate(10vw, 35vh);
+    -ms-transform: translate(10vw, 35vh);
+    -o-transform: translate(10vw, 35vh);
+}
+}

@@ -6,12 +6,20 @@
   border-top: 5px solid #e8ac17;
   position: relative;
   transform: translate(40vw, 40vh);
+  -webkit-transform: translate(40vw, 40vh);
+  -moz-transform: translate(40vw, 40vh);
+  -ms-transform: translate(40vw, 40vh);
+  -o-transform: translate(40vw, 40vh);
 }
 
 @media screen and (min-width: 768px) {
   .load {
-    transform: translate(45vw, 45vh)
-  }
+    transform: translate(45vw, 45vh)  ;
+    -webkit-transform: translate(45vw, 45vh);
+    -moz-transform: translate(45vw, 45vh);
+    -ms-transform: translate(45vw, 45vh);
+    -o-transform: translate(45vw, 45vh);
+}
 }
 
 .load::before,
