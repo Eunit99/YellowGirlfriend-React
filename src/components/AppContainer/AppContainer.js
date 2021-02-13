@@ -25,6 +25,7 @@ class AppContainer extends Component {
       shakeVisitorInputNameField: false, // Do not shake visitor input field by default
       shakeAcceptLearnBtn: false, // Do not shake accept or learn buttons by default
       isTermsOfServiceDescriptionDisplayed: false, // Do not displays terms of service description to visitor by default
+      readBriefDescription: false, // Brief description of Yellow Girlfriend on message screen
     }
     this.appStarterButton = this.appStarterButton.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -176,6 +177,12 @@ class AppContainer extends Component {
     }
   }
 
+  didReadBriefDescription = () => {
+    this.setState({
+      readBriefDescription: true, // Sets read status of brief description to true
+    })
+  }
+
   render() {
     return (
       <div className="app-container animated fadeIn">
@@ -219,6 +226,8 @@ class AppContainer extends Component {
                   visitorAcceptCookies={this.state.visitorAcceptCookies}
                   isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
                   isAppStarterInputDisplayed={this.state.isAppStarterInputDisplayed}
+                  readBriefDescription={this.state.readBriefDescription}
+                  didReadBriefDescription={this.didReadBriefDescription}
                 />
               </div>
             </div>

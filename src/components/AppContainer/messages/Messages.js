@@ -1,17 +1,18 @@
 import React, { useRef } from 'react';
 import './components/assets/Message.css';
 import Chats from './components/Chats';
-// import FirstMessageScreen from './components/FirstMessageScreen';
+import FirstMessageScreen from './components/FirstMessageScreen';
 import '../../AppContainer/assets/css/animate.min.css'
-// import ChatInput from './components/chatsinput/ChatInput';
 
 
 const Messages = (props) => {
-  // let user = props.visitorName,
-      let isMessageScreenDisplayed = props.isMessageScreenDisplayed,
+  let user = props.visitorName,
+      isMessageScreenDisplayed = props.isMessageScreenDisplayed,
       messageRef = useRef(),
       displayMessageScreen,
-      visitorAcceptedCookiesConsent = props.visitorAcceptCookies
+      visitorAcceptedCookiesConsent = props.visitorAcceptCookies,
+      didReadBriefDescription = props.didReadBriefDescription,
+      readBriefDescription = props.readBriefDescription
 
   if (isMessageScreenDisplayed === true && visitorAcceptedCookiesConsent === true) {
      displayMessageScreen = true
@@ -22,6 +23,7 @@ const Messages = (props) => {
   // For development use only
   // console.log(`Is message screen displayed? ${displayMessageScreen}`);
   // console.log(`Is cookie consent accepted? ${visitorAcceptedCookiesConsent}`);
+  // console.log(`readBriefDescription? ${readBriefDescription}`);
 
   return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
@@ -32,12 +34,22 @@ const Messages = (props) => {
           className="message-container"
         >
           {/* Content starts here */}
-          {/* <FirstMessageScreen
+
+        {readBriefDescription ? "" :
+          <FirstMessageScreen
             isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
             user={user}
-          /> */}
-          <Chats />
-          {/* <ChatInput /> */}
+            readBriefDescription={readBriefDescription}
+            didReadBriefDescription={didReadBriefDescription}
+          />
+          }
+
+          {readBriefDescription?
+            <Chats
+              readBriefDescription={readBriefDescription}
+              didReadBriefDescription={didReadBriefDescription}
+            /> :""
+          }
         </div>
       }
     </div>

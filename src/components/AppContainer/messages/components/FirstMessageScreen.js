@@ -6,18 +6,20 @@ import TermsOfService from './firstMessageScreen/termsofservice/TermsOfService';
 class FirstMessageScreen extends Component {
 
   render() {
-    
-    let isTermsOfServiceDescriptionDisplayed = this.props.isTermsOfServiceDescriptionDisplayed;
+    let isTermsOfServiceDescriptionDisplayed = this.props.isTermsOfServiceDescriptionDisplayed,
+        didReadBriefDescription = this.props.didReadBriefDescription;
     // console.log(`isTermsOfServiceDescriptionDisplayed? ${isTermsOfServiceDescriptionDisplayed}`)
 
     return (
       <div className="message-container-intro">
-        {isTermsOfServiceDescriptionDisplayed ? 
+        {isTermsOfServiceDescriptionDisplayed ?
           <TermsOfService
             user={this.props.user}
-          /> : 
+            didReadBriefDescription={didReadBriefDescription}
+          /> :
           <Greetings
             user={this.props.user}
+            didReadBriefDescription={didReadBriefDescription}
           />
         }
 
