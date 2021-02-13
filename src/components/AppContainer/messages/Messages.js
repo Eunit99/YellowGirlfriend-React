@@ -12,7 +12,8 @@ const Messages = (props) => {
       displayMessageScreen,
       visitorAcceptedCookiesConsent = props.visitorAcceptCookies,
       didReadBriefDescription = props.didReadBriefDescription,
-      readBriefDescription = props.readBriefDescription
+      readBriefDescription = props.readBriefDescription,
+      isChatsLoading = props.isChatsLoading
 
   if (isMessageScreenDisplayed === true && visitorAcceptedCookiesConsent === true) {
      displayMessageScreen = true
@@ -23,7 +24,7 @@ const Messages = (props) => {
   // For development use only
   // console.log(`Is message screen displayed? ${displayMessageScreen}`);
   // console.log(`Is cookie consent accepted? ${visitorAcceptedCookiesConsent}`);
-  // console.log(`readBriefDescription? ${readBriefDescription}`);
+  console.log(`readBriefDescription? ${readBriefDescription}`);
 
   return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
@@ -35,21 +36,22 @@ const Messages = (props) => {
         >
           {/* Content starts here */}
 
-        {readBriefDescription ? "" :
-          <FirstMessageScreen
-            isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
-            user={user}
+        {readBriefDescription?
+
+          <Chats
             readBriefDescription={readBriefDescription}
             didReadBriefDescription={didReadBriefDescription}
+            isChatsLoading={isChatsLoading}
           />
+          :
+          <FirstMessageScreen
+          isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
+          user={user}
+          readBriefDescription={readBriefDescription}
+          didReadBriefDescription={didReadBriefDescription}
+        />
           }
 
-          {readBriefDescription?
-            <Chats
-              readBriefDescription={readBriefDescription}
-              didReadBriefDescription={didReadBriefDescription}
-            /> :""
-          }
         </div>
       }
     </div>
