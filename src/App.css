@@ -5,14 +5,6 @@
  */
 
 * {
-  -webkit-user-select: none;
-  /* Chrome, Safari, Android and iOS */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer */
-  user-select: none;
-  /* Disables text selection */
   margin: 0;
   padding: 0;
   /* Remove margins and paddings on elements */
@@ -41,6 +33,45 @@ input:focus {
   background: #e8ac17;
   border-radius: 10px;
 }
+
+::-moz-selection {
+  background: #faeed1;
+  color: #e8ac17;
+  text-shadow: 1px 1px 1px #555;
+  font-weight: 500;
+}
+
+
+::-webkit-selection {
+  background: #faeed1;
+  color: #e8ac17;
+  text-shadow: 1px 1px 1px #555;
+  font-weight: 500;
+}
+
+
+::-o-selection {
+  background: #faeed1;
+  color: #e8ac17;
+  text-shadow: 1px 1px 1px #555;
+  font-weight: 500;
+}
+
+
+::-ms-selection {
+  background: #faeed1;
+  color: #e8ac17;
+  text-shadow: 1px 1px 1px #555;
+  font-weight: 500;
+}
+
+::selection {
+  background: #faeed1;
+  color: #e8ac17;
+  text-shadow: 1px 1px 1px #555;
+  font-weight: 500;
+}
+
 
 input::placeholder,
 textarea::placeholder {
