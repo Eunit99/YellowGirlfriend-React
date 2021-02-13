@@ -4,11 +4,21 @@ class ChatsContainer extends Component {
 
   render() {
     return (
-    <iframe
-      src='http://127.0.0.1:5500/index.html'
-      title="Chat"
-      className="message-container"
-    />
+      <div>
+
+        <iframe
+          src='http://127.0.0.1:5500/index.html'
+          title="Chat"
+          className="message-container"
+        />
+
+        {/* <iframe
+        src='https://yellow-girlfriendchat.netlify.app/index.html'
+        title="Chat"
+        className="message-container"
+        /> */}
+
+      </div>
     );
   }
 }

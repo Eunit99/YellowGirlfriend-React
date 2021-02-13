@@ -333,7 +333,7 @@ ul {
 
 @media screen and (max-width: 480px) {
   .message-container {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .individual-messages {
