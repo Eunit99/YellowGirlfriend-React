@@ -177,7 +177,6 @@ class AppContainer extends Component {
   }
 
   render() {
-    let isChatsLoading = this.props.isChatsLoading; // Get chat loading state
 
     return (
       <div className="app-container animated fadeIn">
@@ -223,7 +222,7 @@ class AppContainer extends Component {
                   isAppStarterInputDisplayed={this.state.isAppStarterInputDisplayed}
                   readBriefDescription={this.props.readBriefDescription}
                   didReadBriefDescription={this.props.didReadBriefDescription}
-                  isChatsLoading={isChatsLoading}
+                  isChatsLoading={this.props.isChatsLoading}
                 />
               </div>
             </div>

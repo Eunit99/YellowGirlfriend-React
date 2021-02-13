@@ -5,6 +5,7 @@ class ChatsContainer extends Component {
 
   render() {
     let isChatsLoading = this.props.isChatsLoading;
+    // console.log(`isChatsLoading? ${isChatsLoading}`);
 
     return (
       <div>

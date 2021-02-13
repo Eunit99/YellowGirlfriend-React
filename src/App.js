@@ -8,7 +8,7 @@ class App extends Component {
     super();
     this.state = {
       isLoading: true,
-      isChatLoading: true,
+      isChatsLoading: true,
       readBriefDescription: false, // Brief description of Yellow Girlfriend on message screen
     }
     this.didReadBriefDescription = this.didReadBriefDescription.bind(this);
@@ -28,28 +28,33 @@ class App extends Component {
     setTimeout(() => {
       this.setState({
         isLoading: false,
-
-        if(readBriefDescription) {
-          this.setState({
-            isChatsLoading: false
-          })
-        }
-
       })
     },
     2000)
+
+    // console.log(`isChatsLoading? ${this.state.isChatsLoading}`);
+    // console.log(`readBriefDescription? ${this.state.readBriefDescription}`);
   }
 
+
+
   render() {
-    let loadingState = this.state.isLoading,
-        isChatsLoading = this.state.isChatsLoading;
+    let loadingState = this.state.isLoading;
+
+    setTimeout(() => {
+      if (this.state.readBriefDescription) {
+        this.setState({
+          isChatsLoading: false
+        })
+      }
+    }, 2000);
 
     return (
       <div>
       { loadingState ?
         <Loading /> :
         <AppContainer
-          isChatsLoading={isChatsLoading}
+          isChatsLoading={this.state.isChatsLoading}
           didReadBriefDescription={this.didReadBriefDescription}
           readBriefDescription={this.state.readBriefDescription}
         />
