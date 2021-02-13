@@ -35,6 +35,18 @@ ul {
   padding: 0;
 }
 
+.message-container:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 40px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(#fffae7, transparent);
+}
+
 .message-container {
   height: 80vh;
   width: 100%;

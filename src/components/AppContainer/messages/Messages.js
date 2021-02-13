@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 import './components/assets/Message.css';
 import Chats from './components/Chats';
-import FirstMessageScreen from './components/FirstMessageScreen';
+// import FirstMessageScreen from './components/FirstMessageScreen';
 import '../../AppContainer/assets/css/animate.min.css'
 // import ChatInput from './components/chatsinput/ChatInput';
 
 
 const Messages = (props) => {
-  let user = props.visitorName,
-      isMessageScreenDisplayed = props.isMessageScreenDisplayed,
+  // let user = props.visitorName,
+      let isMessageScreenDisplayed = props.isMessageScreenDisplayed,
       messageRef = useRef(),
       displayMessageScreen,
       visitorAcceptedCookiesConsent = props.visitorAcceptCookies
@@ -32,10 +32,10 @@ const Messages = (props) => {
           className="message-container"
         >
           {/* Content starts here */}
-          <FirstMessageScreen
+          {/* <FirstMessageScreen
             isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
             user={user}
-          />
+          /> */}
           <Chats />
           {/* <ChatInput /> */}
         </div>
