@@ -129,65 +129,16 @@
   <body>
 
     <body>
-      
+
       <div id="root"></div>
-      <!--
-        /*===== End of Chat messages goes here ======*/ -->
-        <div class="displayNone" id="debug-container" style="display:none">
-          <div>
-            <h1>Debug Options</h1>
-            <div class="container spacer" style="display: block;">
-              <label for="contextValue">Context JSON:</label>
-              <br>
-              <textarea id="contextValue" name="contextValue" placeholder="context to be send..." rows="6"
-                cols="50"></textarea>
-              <br>
-              <br>
-              <br>
-              <br>
-              <button class="btn" type="button" onclick="eddi.insertContextExample()">
-                <span>Insert Example</span>
-              </button>
-            </div>
-            <div class="container spacer" style="display: block;">
-              <div>
-                <p>
-                  <a id="previousConversationLink" href="#" target="_blank" style="display: none;">
-                    Previous Conversation
-                  </a>
-                </p>
-                <div id="previousConversationId">
-
-                </div>
-              </div>
-              <br />
-              <div>
-                <a id="currentConversationLink" href="#" target="_blank">
-                  Current Conversation
-                </a>
-                <div id="currentConversationId">
-
-                </div>
-              </div>
-              <br />
-              <button class="btn" type="button" onclick="eddi.createConversation(eddi.environment, eddi.botId, true)">
-                <span>New Conversation</span>
-              </button>
-              <div>
-                <input type="checkbox" id="skipDelay" name="skipDelay" value="Skip Delay"> Skip Output Delay
-                Animation<br>
-              </div>
-            </div>
-          </div>
+      <noscript>
+        <div class="noJS noJSText">
+          <i class="fa fa-exclamation-triangle fa-3x"></i>
+          Website can't run without JavaScript. Click
+          <a href="https://enable-javascript.com/" title="Learn how to enable JavaScript on your browser"
+            target="_blank">here</a> to learn more.
         </div>
-        <noscript>
-          <div class="noJS noJSText">
-            <i class="fa fa-exclamation-triangle fa-3x"></i>
-            Website can't run without JavaScript. Click
-            <a href="https://enable-javascript.com/" title="Learn how to enable JavaScript on your browser"
-              target="_blank">here</a> to learn more.
-          </div>
-        </noscript>
+      </noscript>
     </body>
 
 </html>
