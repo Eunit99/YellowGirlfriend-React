@@ -93,9 +93,8 @@ class AppContainer extends Component {
       if (visitorName === "" && this.state.isTermsOfServiceDescriptionDisplayed === true) {
         this.setState({
           isSuggestInputNameDisplayed: false
-        }) 
+        })
       }
-      
     },
       6000) // Display info messages if user does nothing in 6s
   }
@@ -117,7 +116,7 @@ class AppContainer extends Component {
 
     // console.log(`visitorName: ${this.state.visitorName}`)
     // console.log(`isSuggestInputNameDisplayed? ${this.state.isSuggestInputNameDisplayed}`)
-    
+
     if (this.state.visitorName === "") {
       this.setState({
         isMessageScreenDisplayed: false, // Do not display message component when accept button is clicked if name input is empty
@@ -161,7 +160,7 @@ class AppContainer extends Component {
       // console.log(`Applied shake to visitor name input field`)
     }
   }
-  
+
   closeInfoCookies = () => {
     this.setState({
       isSuggestAcceptCookiesDisplayed: false, // Hide acceptance of cookie when close is clicked
@@ -175,7 +174,7 @@ class AppContainer extends Component {
 
       // console.log(`Applied shake to "learn more" and "accept" button`)
     }
-  } 
+  }
 
   render() {
     return (
