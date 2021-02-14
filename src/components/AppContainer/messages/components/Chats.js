@@ -9,21 +9,22 @@ class ChatsContainer extends Component {
 
     return (
       <div>
-        {isChatsLoading?
-        <ChatsLoader />
-          :
         <iframe
           src='http://127.0.0.1:5500/index.html'
           title="Chat"
-          className="message-container"
+          className={`message-container ${isChatsLoading? "displayNone" : ""}`}
         />
-        }
 
         {/* <iframe
         src='https://yellow-girlfriendchat.netlify.app/index.html'
         title="Chat"
-        className="message-container"
+        className={`message-container ${isChatsLoading? "displayNone" : ""}`}
         /> */}
+
+        {isChatsLoading?
+        <ChatsLoader />
+        : ""
+        }
       </div>
     );
   }
