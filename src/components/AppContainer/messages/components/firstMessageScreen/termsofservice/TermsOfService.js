@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class TermsOfService extends Component {
 
   render() {
-    let cookiesAccept = this.props.cookiesAccept;
+    let cookiesAccept = this.props.cookiesAccept; 
 
     return (
       <div className="terms-of-service-container">
