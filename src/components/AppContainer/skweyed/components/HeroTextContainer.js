@@ -4,17 +4,22 @@ import ReactTooltip from 'react-tooltip'
 import CookiesConsent from './cookies-consent/CookiesConsent';
 import UsefulInfo from '../../usefulinfo/UsefulInfo';
 import Scroll from './scrolldown/Scroll';
+import HeroTextOne from './alternateherotext/HeroTextOne';
+import HeroTextTwo from './alternateherotext/HeroTextTwo';
 
 
 class HeroTextContainer extends Component {
   render() {
-    
+
     let headingText = "We believe you know your girlfriend cheats on you",
         isMessageScreenDisplayed = this.props.isMessageScreenDisplayed,
         isAppStarterInputDisplayed = this.props.isAppStarterInputDisplayed,
+        readBriefDescription = this.props.readBriefDescription,
         hour = new Date().getHours();
+
     // console.log(`isMessageScreenDisplayed? ${isMessageScreenDisplayed}`);
-    
+    console.log(`readBriefDescription? ${readBriefDescription}`);
+
     if (hour < 12) {
       headingText = "We believe you know your girlfriend cheats on you"
     } else if (hour >= 12 && hour < 17) {
@@ -32,22 +37,26 @@ class HeroTextContainer extends Component {
             {headingText}
             <span
               data-tip="This is just our opinion and shouldn't be<br>
-                        considered a professional advice.">*</span>
+              considered a professional advice.">*</span>
           </h1>
         </div>
-        <div className="mb-3 mb-sm-3">
+        <div className="mb-2 mb-sm-3">
           <p>We're convinced your girlfriend cheats on you, if not, you wouldn't find yourself here!
           </p>
         </div>
         <div className="mb-3 mb-sm-5">
-          <p>Anyways, take a few minutes to complete our assessment to better understand if your girlfriend is a
-            "<span
+          <p>
+          {readBriefDescription?
+            <HeroTextOne />
+            :
+            <HeroTextTwo />
+          }
+          &nbsp;"<span
               className="title-text"
               data-tip="Yellow girlfriend is our own term given to<br>
               cheating girlfriends and has nothing to do with any race or skin colour. <br>
               Please read our Terms of Service to learn more."
-            >
-              yellow girlfriend
+            >yellow girlfriend
             </span>"
           </p>
           <ReactTooltip

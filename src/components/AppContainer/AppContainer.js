@@ -215,6 +215,8 @@ class AppContainer extends Component {
                   isTermsOfServiceDescriptionDisplayed={this.state.isTermsOfServiceDescriptionDisplayed}
                   isAppStarterInputDisplayed={this.state.isAppStarterInputDisplayed}
                   isMessageScreenDisplayed={this.state.isMessageScreenDisplayed}
+                  didReadBriefDescription={this.props.didReadBriefDescription}
+                  readBriefDescription={this.props.readBriefDescription}
                 />
 
                 <Messages
