@@ -53,6 +53,14 @@ class AppContainer extends Component {
         shakeAcceptLearnBtn: true, // Shake accept and learn buttons if cookie consent is not accepted and appStarterBtn clicked
       })
     }
+
+    // If visitor has accepted cookies terms and has input their name, then hide terms of service
+    if (this.state.visitorAcceptCookies) {
+      this.setState({
+        isTermsOfServiceDescriptionDisplayed: false, // Hide terms of service description container
+      })
+    }
+
   }
 
   onChangeHandler(e) {

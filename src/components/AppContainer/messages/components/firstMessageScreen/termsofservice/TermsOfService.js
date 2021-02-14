@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 class TermsOfService extends Component {
 
   render() {
+    let cookiesAccept = this.props.cookiesAccept;
+
     return (
-      <div className="small-into terms-of-service-container">Terms of Service
-        <div>
+      <div className="terms-of-service-container">
+        <div className="small-into">Terms of Service</div>
+        <p>
           
           loremIncididunt enim laborum occaecat velit cillum. Laborum commodo tempor aliquip officia pariatur proident laboris culpa fugiat voluptate. Dolore laboris mollit mollit nostrud commodo est labore irure eu duis ullamco. Nostrud Lorem occaecat occaecat nulla ipsum officia consequat aliqua minim. In sunt fugiat anim excepteur laborum veniam amet. Culpa do et anim elit ea ipsum. Minim Lorem ipsum deserunt labore duis mollit anim nisi veniam proident qui duis.
 
@@ -22,7 +25,14 @@ class TermsOfService extends Component {
           Laborum esse veniam laborum ex duis nisi qui aliqua est qui ea consectetur in tempor. Enim consectetur irure sit ea adipisicing occaecat ea ex irure excepteur. Sunt non incididunt mollit officia. Consequat Lorem ex consequat sint minim. Id non non id magna magna cupidatat duis sunt consectetur aute elit enim. Laborum ut amet irure minim excepteur culpa commodo ut. Magna esse eiusmod nisi voluptate minim sint consequat tempor ullamco Lorem.
 
           Elit velit et sunt enim sint dolore ullamco laborum ex dolore id dolor. Dolore consequat magna ipsum qui nisi incididunt culpa incididunt ipsum ad commodo ut labore. Deserunt mollit quis duis id sit ipsum excepteur nostrud nisi do eiusmod mollit non. Dolore consectetur est amet ad aliqua amet mollit.
-        </div>
+        </p>
+
+        <button
+          onClick={cookiesAccept}
+          className=" mt-2 btn btn-primary btn-outline-primary p-3 w-100 text-uppercase text-white"
+        >
+          I Accept
+        </button>
       </div>
     );
   }

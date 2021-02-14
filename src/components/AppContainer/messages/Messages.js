@@ -55,6 +55,8 @@ const Messages = (props) => {
             readBriefDescription={readBriefDescription}
             didReadBriefDescription={didReadBriefDescription}
             isChatsLoading={isChatsLoading}
+            cookiesAccept={props.cookiesAccept}
+            visitorAcceptCookies={props.visitorAcceptCookies}
         />
           }
         </div>

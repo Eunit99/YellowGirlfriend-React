@@ -9,14 +9,19 @@ class FirstMessageScreen extends Component {
   render() {
     let isTermsOfServiceDescriptionDisplayed = this.props.isTermsOfServiceDescriptionDisplayed,
         didReadBriefDescription = this.props.didReadBriefDescription;
+        // visitorAcceptCookies = this.props.visitorAcceptCookies;
+
+
+        // For development use only
     // console.log(`isTermsOfServiceDescriptionDisplayed? ${isTermsOfServiceDescriptionDisplayed}`)
+    // console.log(`visitorAcceptCookies? ${visitorAcceptCookies}`)
 
     return (
       <div className="message-container-intro">
         {isTermsOfServiceDescriptionDisplayed ?
           <TermsOfService
             user={this.props.user}
-            didReadBriefDescription={didReadBriefDescription}
+            cookiesAccept={this.props.cookiesAccept}
           /> :
           <Greetings
             user={this.props.user}
