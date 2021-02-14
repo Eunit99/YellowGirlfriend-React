@@ -58,11 +58,11 @@ ul {
   opacity: 0.8;
   margin: auto;
   margin-right: 40px;
-  border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   transition: opacity linear 1s;
 }
 
@@ -72,7 +72,7 @@ ul {
 .message-container-intro {
   position: relative;
   display: block;
-  /* margin-top: 100px; Do not need this margin beacuse of the descriptive first message */
+  /* margin-top: 100px; Do not need this margin beacause of the descriptive first message */
 }
 
 .small-into {
@@ -309,7 +309,7 @@ ul {
 
   .message-container {
     height: 100vh;
-    padding: 4rem;
+    padding: 3rem;
     margin: auto;
     margin-right: 40px;
   }
@@ -330,7 +330,7 @@ ul {
   }
 
   .message-container {
-    padding: 4rem;
+    padding: 2rem;
     margin: auto;
   }
 }
@@ -345,7 +345,7 @@ ul {
 
 @media screen and (max-width: 480px) {
   .message-container {
-    padding: 1rem;
+    padding: 0.625rem;
   }
 
   .individual-messages {
