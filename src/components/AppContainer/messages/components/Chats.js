@@ -9,6 +9,10 @@ class ChatsContainer extends Component {
 
     return (
       <div>
+        {isChatsLoading ?
+        <ChatsLoader />
+        :""
+        }
         <iframe
           src='http://127.0.0.1:5500/index.html'
           title="Chat"
@@ -21,10 +25,6 @@ class ChatsContainer extends Component {
           className={`message-container ${isChatsLoading? "displayNone" : ""}`}
         /> */}
 
-        {isChatsLoading?
-        <ChatsLoader />
-        : ""
-        }
       </div>
     );
   }

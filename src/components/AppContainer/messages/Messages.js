@@ -3,6 +3,7 @@ import './components/assets/Message.css';
 import Chats from './components/Chats';
 import FirstMessageScreen from './components/FirstMessageScreen';
 import '../../AppContainer/assets/css/animate.min.css'
+import ChatsLoader from './components/chatsloader/ChatsLoader';
 
 
 const Messages = (props) => {
@@ -13,18 +14,20 @@ const Messages = (props) => {
       visitorAcceptedCookiesConsent = props.visitorAcceptCookies,
       didReadBriefDescription = props.didReadBriefDescription,
       readBriefDescription = props.readBriefDescription,
-      isChatsLoading = props.isChatsLoading
+      isChatsLoading = props.isChatsLoading;
 
   if (isMessageScreenDisplayed === true && visitorAcceptedCookiesConsent === true) {
-     displayMessageScreen = true
+      displayMessageScreen = true
   } else {
-     displayMessageScreen = false
+      displayMessageScreen = false
   }
 
   // For development use only
   // console.log(`Is message screen displayed? ${displayMessageScreen}`);
   // console.log(`Is cookie consent accepted? ${visitorAcceptedCookiesConsent}`);
   // console.log(`readBriefDescription? ${readBriefDescription}`);
+  // console.log(`isChatsLoading? ${isChatsLoading}`);
+
 
   return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-5 p-0 my-auto">
@@ -37,12 +40,14 @@ const Messages = (props) => {
           {/* Content starts here */}
 
         {readBriefDescription?
-
-          <Chats
-            readBriefDescription={readBriefDescription}
-            didReadBriefDescription={didReadBriefDescription}
-            isChatsLoading={isChatsLoading}
-          />
+            isChatsLoading?
+            <ChatsLoader />
+            :
+            <Chats
+                readBriefDescription={readBriefDescription}
+                didReadBriefDescription={didReadBriefDescription}
+                isChatsLoading={isChatsLoading}
+            />
           :
           <FirstMessageScreen
           isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
@@ -52,7 +57,6 @@ const Messages = (props) => {
           isChatsLoading={isChatsLoading}
         />
           }
-
         </div>
       }
     </div>

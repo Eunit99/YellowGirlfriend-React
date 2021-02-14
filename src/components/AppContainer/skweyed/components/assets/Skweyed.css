@@ -27,6 +27,8 @@
 .skweyed .skweyed-content {
   display: grid;
   place-content: center;
+  height: 100vh;
+  margin: auto;
 }
 
 .skweyed .skweyed-content .hero-heading {
@@ -141,8 +143,6 @@
 @media (min-width: 300px) and (max-width: 360px) {
   .skweyed .skweyed-content {
     padding: 1.225rem;
-    height: 100vh;
-    margin: auto;
   }
 
   .skweyed .skweyed-content .input-group {
@@ -200,18 +200,6 @@
 
 /**
  *`
- *  SMALLER PHONES TO TABLETS
- *	(from 385px - 800px)
- */
-
-@media screen and (min-width: 385px) and (max-width: 800px) {
-  .skweyed .skweyed-content {
-    height: 100vh;
-  }
-}
-
-/**
- *`
  *  TABLETS
  *	(from 768px - 800px)
  */
@@ -220,7 +208,6 @@
 @media (min-width: 768px) and (max-width: 800px) {
   .skweyed .skweyed-content {
     padding: 5rem;
-    margin: auto;
   }
 
 

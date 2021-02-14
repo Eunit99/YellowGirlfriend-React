@@ -30,8 +30,9 @@ class App extends Component {
         isLoading: false,
       })
     },
-    2000)
+    2000);
 
+    // For development use only
     // console.log(`isChatsLoading? ${this.state.isChatsLoading}`);
     // console.log(`readBriefDescription? ${this.state.readBriefDescription}`);
   }
@@ -40,7 +41,6 @@ class App extends Component {
 
   render() {
     let loadingState = this.state.isLoading;
-
     setTimeout(() => {
       if (this.state.readBriefDescription) {
         this.setState({

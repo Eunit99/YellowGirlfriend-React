@@ -51,6 +51,10 @@
   border-bottom: 2px solid #e8ac17;
 }
 
+.cookies-cta-inline.cookie-policy {
+  margin: 0 0 0 3px;
+}
+
 .cookies-cta--learn {
   background-color: #555;
 }
