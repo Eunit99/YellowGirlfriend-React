@@ -1,0 +1,16 @@
+.p-blockquote {
+  border: 0;
+  border-left: 4px solid #403f45;
+  /* border-image: linear-gradient(#e8ac17, #403f45, #007bff); */
+  margin-left: 1.115rem;
+}
+
+.italic,
+.i {
+  font-style: italic
+}
+
+.bold,
+.b {
+  font-weight: 700
+}

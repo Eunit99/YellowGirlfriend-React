@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Greetings from './firstMessageScreen/greetings/Greetings';
 import TermsOfService from './firstMessageScreen/termsofservice/TermsOfService';
+import './firstMessageScreen/assets/firstScreenMessage.css'
 // import FirstMessageInputContainer from './firstMessageScreen/FirstMessageInputContainer'
 
 class FirstMessageScreen extends Component {

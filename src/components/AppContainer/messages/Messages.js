@@ -44,17 +44,17 @@ const Messages = (props) => {
             <ChatsLoader />
             :
             <Chats
-                readBriefDescription={readBriefDescription}
-                didReadBriefDescription={didReadBriefDescription}
-                isChatsLoading={isChatsLoading}
+              readBriefDescription={readBriefDescription}
+              didReadBriefDescription={didReadBriefDescription}
+              isChatsLoading={isChatsLoading}
             />
           :
           <FirstMessageScreen
-          isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
-          user={user}
-          readBriefDescription={readBriefDescription}
-          didReadBriefDescription={didReadBriefDescription}
-          isChatsLoading={isChatsLoading}
+            isTermsOfServiceDescriptionDisplayed={props.isTermsOfServiceDescriptionDisplayed}
+            user={user}
+            readBriefDescription={readBriefDescription}
+            didReadBriefDescription={didReadBriefDescription}
+            isChatsLoading={isChatsLoading}
         />
           }
         </div>
