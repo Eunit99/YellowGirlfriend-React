@@ -32,7 +32,7 @@ const Messages = (props) => {
         <div
           ref={messageRef}
           id="messageContainer"
-          className="message-container"
+          className="message-container animated fadeInRight"
         >
           {/* Content starts here */}
 

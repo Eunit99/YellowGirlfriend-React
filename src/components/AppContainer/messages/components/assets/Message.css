@@ -72,7 +72,7 @@ ul {
 .message-container-intro {
   position: relative;
   display: block;
-  /* margin-top: 100px; Do not need this margin beacause of the descriptive first message */
+  /* margin-top: 100px; Do not need this margin because of the descriptive first message */
 }
 
 .small-into {
