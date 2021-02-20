@@ -18,7 +18,7 @@ class HeroTextContainer extends Component {
         hour = new Date().getHours();
 
     // console.log(`isMessageScreenDisplayed? ${isMessageScreenDisplayed}`);
-    console.log(`readBriefDescription? ${readBriefDescription}`);
+    // console.log(`readBriefDescription? ${readBriefDescription}`);
 
     if (hour < 12) {
       headingText = "We believe you know your girlfriend cheats on you"

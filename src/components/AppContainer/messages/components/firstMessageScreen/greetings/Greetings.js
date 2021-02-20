@@ -40,8 +40,8 @@ class Greetings extends Component {
             className="italic i">(or probably will)</span> and therefore enabling them not to expect 
           more from them rather, they should brace it.
 
-          <br />
-          According to <a
+          {/* Hide from this part below */}
+          <div className="displayNone"> According to <a
             className="text-decoration-none"
             target="_blank"
             rel="noreferrer"
@@ -82,17 +82,25 @@ class Greetings extends Component {
                 href="https://gen.medium.com/the-future-of-infidelity-is-female-4e2da7cc7037"
                 rel="noreferrer"
                 target="_blank"
-              > Helen Fisher, Ph.D.</a>
+              > Helen Fisher, Ph.D.</a> 
             </cite>
           </blockquote>
         </div>
+
+        {/* Hidden part start */}
+        <p className="displayNone">
         This means that fewer women are marrying out of need, instead, they are marrying to please themselves.
         When they are dissatisfied with something, they can feel justified to go elsewhere [...]
+        </p>
+        {/* Hidden part end */}
         <br />
         <br />
         We at YellowGirlfriend do not deny the fact that both genders cheat, but we 
         aim at sensitizing the male folks about the potentiality of their girlfriend to cheat.
-        <br />
+        </div>
+
+        {/* Hidden part end */}
+
         <br />
         <span
           className="text-uppercase"
