@@ -10,7 +10,6 @@
   box-shadow: 0 6px 18px 0 #00235a14, 0 0 2px 0 #00235a0f;
   cursor: pointer;
   transform: translateY(30px);
-  opacity: 0;
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
@@ -53,9 +52,8 @@ ul {
   display: block;
   padding: 30px;
   overflow-x: hidden;
-  background-color: #fffdf1;
+  background-color: #fffdf1b0;
   color: #0f0f0f;
-  opacity: 0.8;
   margin: auto;
   margin-right: 40px;
   border-radius: 0;
@@ -63,7 +61,6 @@ ul {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  transition: opacity linear 1s;
 }
 
 
@@ -158,11 +155,10 @@ ul {
   bottom: 0;
   left: 0;
   width: 98%;
-  background-color: #ffffe0;
+  background-color: #ffffe0a6;
   display: flex;
   align-items: center;
   visibility: hidden;
-  opacity: 0;
   transition: transform 0.1s ease-in;
   margin: 3.625rem 1.625rem;
   z-index: 7;
