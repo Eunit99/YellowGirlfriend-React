@@ -1,0 +1,60 @@
+{
+  "icons": [{
+      "src": "img/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "72x72",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "92x92",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "96x96",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "120x120",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "144x144",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#e8ac17",
+  "background_color": "#ffffff",
+  "short_name": "Yellow Girlfriend",
+  "name": "Yellow Girlfriend | Grade your girlfriend's SMV and get feedback based on your gradings.",
+  "orientation": "portrait"
+}
