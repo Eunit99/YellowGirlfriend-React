@@ -16,7 +16,7 @@ class Greetings extends Component {
     // console.log(`isVisitor? ${isVisitor}`)
 
     return (
-      <div className="greeting-container">
+      <div className="greeting-container px-3 pb-0">
         <div className="long-into">
           {isVisitor ? greetWithoutName : greetWithName}
         </div>
@@ -82,7 +82,7 @@ class Greetings extends Component {
                 href="https://gen.medium.com/the-future-of-infidelity-is-female-4e2da7cc7037"
                 rel="noreferrer"
                 target="_blank"
-              > Helen Fisher, Ph.D.</a> 
+              > Helen Fisher, Ph.D.</a>
             </cite>
           </blockquote>
         </div>
@@ -95,7 +95,7 @@ class Greetings extends Component {
         {/* Hidden part end */}
         <br />
         <br />
-        We at YellowGirlfriend do not deny the fact that both genders cheat, but we 
+        We at YellowGirlfriend do not deny the fact that both genders cheat, but we
         aim at sensitizing the male folks about the potentiality of their girlfriend to cheat.
         </div>
 
@@ -103,14 +103,14 @@ class Greetings extends Component {
 
         <br />
         <span
-          className="text-uppercase"
+          className="text-uppercase d-inline-block mb-5"
         > We hope you understand that this is an expressed opinion and we are not to be held liable for
-          damages arising by not limited to the use, application, of the advice, opinion, and or 
+          damages arising by not limited to the use, application, of the advice, opinion, and or
           suggestion contained herein on YellowGirlfriend.
         </span>
         <button
           onClick={didReadBriefDescription}
-          className="mt-2 btn btn-primary btn-outline-primary p-3 w-100 text-uppercase text-white"
+          className="btn btn-primary btn-outline-primary p-3 w-100 text-uppercase text-white mt-5"
         >
         I Understand
         </button>
