@@ -15,6 +15,7 @@
   font-weight: 700
 }
 
-.greeting-container {
+.greeting-container,
+.terms-of-service-container {
   line-height: 1.625rem;
 }
