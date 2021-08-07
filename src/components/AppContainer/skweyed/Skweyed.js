@@ -30,6 +30,7 @@ class Skweyed extends Component {
           isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
           didReadBriefDescription={this.props.didReadBriefDescription}
           readBriefDescription={this.props.readBriefDescription}
+					handleEnterKey={this.props.handleEnterKey}
         />
         <SocialIconsContainer />
       </div>

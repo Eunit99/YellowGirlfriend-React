@@ -80,6 +80,7 @@ class HeroTextContainer extends Component {
           shakeVisitorInputNameField={this.props.shakeVisitorInputNameField}
           isAppStarterInputDisplayed={this.props.isAppStarterInputDisplayed}
           isMessageScreenDisplayed={this.props.isMessageScreenDisplayed}
+					handleEnterKey={this.props.handleEnterKey}
         /> : ""
         }
 

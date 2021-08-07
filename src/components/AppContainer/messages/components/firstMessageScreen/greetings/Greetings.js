@@ -55,13 +55,13 @@ class Greetings extends Component {
           </a>.
             <blockquote
               className="p-blockquote mt-3 pl-3">
-              Rates of infidelity among women are thought to increase with age. In one study, 
-              rates were higher in more recent marriages, compared with previous generations [...] 
-              Another study found out that the likelihood for women to be involved in infidelity 
+              Rates of infidelity among women are thought to increase with age. In one study,
+              rates were higher in more recent marriages, compared with previous generations [...]
+              Another study found out that the likelihood for women to be involved in infidelity
               reached a peak in the seventh year of their marriage [...]
               <cite
                 className="p-cite"
-              > - 
+              > -
                 <a
                   className="text-decoration-none"
                   href="https://en.wikipedia.org/wiki/Infidelity"
@@ -110,7 +110,7 @@ class Greetings extends Component {
         </span>
         <button
           onClick={didReadBriefDescription}
-          className="btn btn-primary btn-outline-primary p-3 w-100 text-uppercase text-white mt-5"
+          className="btn btn-primary btn-outline-primary p-3 w-100 text-uppercase text-white mt-5 cta-btn-read"
         >
         I Understand
         </button>

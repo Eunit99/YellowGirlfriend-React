@@ -16,6 +16,7 @@ class WelcomeInputContainer extends Component {
           onChangeHandler={this.props.onChangeHandler}
           visitorName={this.props.visitorName}
           shakeVisitorInputNameField={this.props.shakeVisitorInputNameField}
+					handleEnterKey={this.props.handleEnterKey}
         />
 
         <AppStarterButton

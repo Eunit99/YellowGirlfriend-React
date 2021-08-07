@@ -70,6 +70,14 @@ class AppContainer extends Component {
     })
   }
 
+	// Handle submit enter key on the messages container
+	handleEnterKey = (e) => {
+		if (e.key === "Enter") {
+			this.appStarterButton();
+		}
+	}
+
+
   handleScrollClick(ref) {
   // console.log(`Click happened! ${ref}`); // Ref is still undefined! Having a hard time passing it from the child component, I hope to fix this soon.
   // ref.current.scrollIntoView({ behaviour: 'smooth' }) //Ref is still undefined!
@@ -217,6 +225,7 @@ class AppContainer extends Component {
                   isMessageScreenDisplayed={this.state.isMessageScreenDisplayed}
                   didReadBriefDescription={this.props.didReadBriefDescription}
                   readBriefDescription={this.props.readBriefDescription}
+									handleEnterKey={this.handleEnterKey}
                 />
 
                 <Messages

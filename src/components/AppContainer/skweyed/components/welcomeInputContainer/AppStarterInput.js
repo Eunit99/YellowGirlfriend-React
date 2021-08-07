@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 class WelcomeInputContainer extends Component {
-  
+
+
+
   render() {
     let shakeVisitorInputNameField = this.props.shakeVisitorInputNameField;
 
@@ -13,7 +15,9 @@ class WelcomeInputContainer extends Component {
           aria-describedby="submit-button"
           id="nameInput"
           value={this.props.visitorName}
-          onChange={this.props.onChangeHandler}
+					onChange={this.props.onChangeHandler}
+					onKeyDown={this.props.handleEnterKey}
+					tabIndex={0}
         />
     );
   }
