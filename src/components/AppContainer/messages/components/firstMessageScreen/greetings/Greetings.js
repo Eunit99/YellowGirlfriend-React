@@ -28,16 +28,16 @@ class Greetings extends Component {
             className="text-decoration-none"
             target="_blank"
             rel="noreferrer"
-            href="https://colormatters.com/yellow"> 
+            href="https://colormatters.com/yellow">
             deception, betrayal, egoism
-          </a> and then, we match it with the term <span className="bold">girlfriend</span> to probably 
-          mean a <span className="italic">cheating girlfriend</span>. 
+          </a> and then, we match it with the term <span className="bold">girlfriend</span> to probably
+          mean a <span className="italic">cheating girlfriend</span>.
 
           <br />
           <br />
           YellowGirlfriend is an awakening movement to the male folks by its developer.
           Its aim is to bring men to the cognizance that their girlfriend is cheating <span
-            className="italic i">(or probably will)</span> and therefore enabling them not to expect 
+            className="italic i">(or probably will)</span> and therefore enabling them not to expect
           more from them rather, they should brace it.
 
           {/* Hide from this part below */}
