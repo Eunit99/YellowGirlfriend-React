@@ -13,18 +13,18 @@ class ChatsContainer extends Component {
         <ChatsLoader />
         :""
         }
-        <iframe
+        {/*
+				<iframe
           src='http://127.0.0.1:5500/index.html'
           title="Chat"
           className={`message-container ${isChatsLoading? "displayNone" : ""}`}
         />
-
-
-        {/* <iframe
+				*/}
+         <iframe
           src='https://yellow-girlfriendchat.netlify.app/index.html'
           title="Chat"
           className={`message-container ${isChatsLoading? "displayNone" : ""}`}
-				/>*/}
+				/>
 
       </div>
     );
