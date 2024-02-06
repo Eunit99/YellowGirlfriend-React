@@ -30,7 +30,7 @@ class App extends Component {
         isLoading: false,
       })
     },
-    2000);
+      2000);
 
     // For development use only
     // console.log(`isChatsLoading? ${this.state.isChatsLoading}`);
@@ -51,14 +51,14 @@ class App extends Component {
 
     return (
       <div>
-      { loadingState ?
-        <Loading /> :
-        <AppContainer
-          isChatsLoading={this.state.isChatsLoading}
-          didReadBriefDescription={this.didReadBriefDescription}
-          readBriefDescription={this.state.readBriefDescription}
-        />
-      }
+        {loadingState ?
+          <Loading /> :
+          <AppContainer
+            isChatsLoading={this.state.isChatsLoading}
+            didReadBriefDescription={this.didReadBriefDescription}
+            readBriefDescription={this.state.readBriefDescription}
+          />
+        }
       </div>
     );
   }

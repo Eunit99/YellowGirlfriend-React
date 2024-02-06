@@ -4,7 +4,7 @@ class FirstMessageInputContainer extends Component {
 
   render() {
     return (
-      <div className="message-input">
+      <div className="message-input" data-testid="input">
         <span className="input-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

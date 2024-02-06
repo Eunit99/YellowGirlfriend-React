@@ -1,55 +1,59 @@
 {
-  "name": "yellowgirlfriend",
-  "version": "1.0.0",
-  "description": "Yellow Girlfriend let's you grade your girlfriend SMV and get feedback based on your result",
-  "main": "index.js",
-  "repository": "https://github.com/Eunit99/YellowGirlfriend-React.git",
-  "author": "Eunit <eunithelp@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "bootstrap": "^4.6.0",
-    "browserslist": "^4.6.3",
-    "jquery": "^3.5.1",
-    "jquery-ui": "^1.12.1",
-    "popper.js": "^1.16.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "react-scripts": "4.0.0",
-    "react-scroll": "^1.8.1",
-    "react-tooltip": "^4.2.13",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      "defaults",
-      "not IE 11"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "yellowgirlfriend",
+    "version": "1.0.0",
+    "description": "Yellow Girlfriend let's you grade your girlfriend SMV and get feedback based on your result",
+    "main": "index.js",
+    "repository": "https://github.com/Eunit99/YellowGirlfriend-React.git",
+    "author": "Eunit <eunithelp@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.34",
+        "@fortawesome/free-brands-svg-icons": "^5.15.2",
+        "@fortawesome/free-regular-svg-icons": "^5.15.2",
+        "@fortawesome/free-solid-svg-icons": "^5.15.2",
+        "@fortawesome/react-fontawesome": "^0.1.14",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "bootstrap": "^4.6.0",
+        "browserslist": "^4.6.3",
+        "jquery": "^3.5.1",
+        "jquery-ui": "^1.12.1",
+        "popper.js": "^1.16.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-icons": "^4.1.0",
+        "react-scripts": "4.0.0",
+        "react-scroll": "^1.8.1",
+        "react-tooltip": "^4.2.13",
+        "web-vitals": "^0.2.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "cypress": "cypress open"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            "defaults",
+            "not IE 11"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "cypress": "^13.6.4"
+    }
 }

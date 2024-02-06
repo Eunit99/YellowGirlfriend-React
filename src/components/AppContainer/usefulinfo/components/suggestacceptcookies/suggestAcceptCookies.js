@@ -8,16 +8,16 @@ class SuggestAcceptCookies extends Component {
 
   render() {
     let isSuggestAcceptCookiesDisplayed = this.props.isSuggestAcceptCookiesDisplayed,
-    shakeCookieSuggestion = this.props.shakeCookieSuggestion
+      shakeCookieSuggestion = this.props.shakeCookieSuggestion
 
 
     // For development use only
     // console.log(`isSuggestAcceptCookiesDisplayed? ${isSuggestAcceptCookiesDisplayed}`)
     // console.log(`shakeCookieSuggestion? ${shakeCookieSuggestion}`)
-    
+
     return (
-      <div className="contain">
-        {isSuggestAcceptCookiesDisplayed ? 
+      <div className="contain" data-testid="accept-terms">
+        {isSuggestAcceptCookiesDisplayed ?
           <div className={`
             info-container
             animated
@@ -52,7 +52,7 @@ class SuggestAcceptCookies extends Component {
               </div>
             </div>
           </div>
-        : "" }
+          : ""}
       </div>
     );
   }

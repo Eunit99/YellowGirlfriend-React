@@ -21,7 +21,7 @@ class CookiesConsent extends Component {
             ${ isCookiesConsentDisplayed ? "slideInUp" : "" }
             ${ visitorAcceptCookies ? "slideOutDown" : "" }
           `}>
-          <div className="row cookies-consent-text cookies-consent-text--span">
+            <div className="row cookies-consent-text cookies-consent-text--span" data-testid="accept-terms">
             <div className="col-12 mx-1">
               <div className="cookies-title mb-2 text-left">
                 Notice
